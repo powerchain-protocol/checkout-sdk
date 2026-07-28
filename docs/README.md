@@ -5,7 +5,7 @@ Version 1.0 Beta
 
 ---
 
-# Documentation Index
+## Documentation Index
 
 ```text
 docs/
