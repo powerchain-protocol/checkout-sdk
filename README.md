@@ -40,33 +40,44 @@ It enables organizations to rapidly build and scale advanced payment experiences
 
 ```mermaid
 flowchart TD
-    A[Enterprise Applications] --> B[PowerChain Checkout SDK]
-    
+
+    A[Enterprise Applications]
+
+    A --> B[PowerChain Checkout SDK]
+
     B --> C[PowerChain UI™]
     B --> D[Checkout Experience Engine™]
     B --> E[PowerPay Payment Gateway™]
     B --> F[Wallet OS™]
     B --> G[Asset Cloud™]
     B --> H[PowerChain Intelligence™]
-    
+
+
     E --> I[Payment Router]
     I --> J[Payment Providers]
     I --> K[Risk Engine]
     I --> L[Settlement Engine]
-    
+
+
     F --> M[Solana Enterprise Layer™]
+
     M --> N[Solana RPC + Helius]
     M --> O[Anchor Programs]
     M --> P[SPL Token-2022]
-    
-    B --> Q[API Gateway]
-    Q --> R[/api/v1]
-    R --> S[Enterprise Services]
-    S --> T[Kubernetes Platform]
-    S --> T[Kubernetes Platform]
-```
 
----
+
+    B --> Q[API Gateway]
+
+    Q --> R[/api/v1 API Layer]
+
+    R --> S[Enterprise Services]
+
+    S --> T[Kubernetes Platform]
+
+    T --> U[Cloud Infrastructure]
+
+    U --> V[Monitoring & Observability]
+```
 
 # Platform Architecture
 
