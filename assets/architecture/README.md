@@ -1,6 +1,4 @@
-# PowerChain Checkout™
-
-## Enterprise Architecture Specification v1.0 Beta
+# PowerChain Checkout - Architecture Specification v1.0 Beta
 
 **Enterprise Commerce, Payment Orchestration & Programmable Settlement Architecture**
 
