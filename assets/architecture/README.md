@@ -1,807 +1,728 @@
-# PowerChain Checkout - Architecture Specification v1.0 Beta
+# PowerChain Checkout - Technical Documentation
+Version 1.0 Beta
 
-**Enterprise Commerce, Payment Orchestration & Programmable Settlement Architecture**
-
----
-
-# 1. Architecture Overview
-
-PowerChain Checkout™ is designed as a **cloud-native, modular financial infrastructure platform** that connects enterprise commerce applications, payment networks, blockchain ecosystems, digital assets, and treasury infrastructure through a unified transaction orchestration layer.
-
-The architecture separates:
-
-* User experience
-* Commerce processing
-* Payment execution
-* Digital asset management
-* AI decision systems
-* Settlement infrastructure
-* Enterprise operations
-* Security controls
-
-This enables organisations to deploy PowerChain Checkout™ as:
-
-* Enterprise checkout infrastructure
-* Embedded finance platform
-* Digital asset settlement layer
-* Tokenisation platform
-* Treasury automation system
+### Enterprise Commerce, Payment Orchestration & Programmable Settlement Platform
 
 ---
 
-# 2. High-Level Architecture
+# Documentation Index
+
+```text
+docs/
+
+├── 01-overview
+│   ├── introduction.md
+│   ├── platform-capabilities.md
+│   ├── terminology.md
+│   └── principles.md
+│
+├── 02-architecture
+│   ├── architecture-overview.md
+│   ├── system-architecture.md
+│   ├── service-architecture.md
+│   ├── data-architecture.md
+│   ├── event-architecture.md
+│   └── network-architecture.md
+│
+├── 03-checkout-platform
+│   ├── checkout-engine.md
+│   ├── hosted-checkout.md
+│   ├── embedded-checkout.md
+│   ├── payment-links.md
+│   └── invoice-system.md
+│
+├── 04-payment-platform
+│   ├── payment-processing.md
+│   ├── payment-routing.md
+│   ├── payment-intents.md
+│   ├── refunds.md
+│   └── disputes.md
+│
+├── 05-wallet-platform
+│   ├── wallet-architecture.md
+│   ├── embedded-wallets.md
+│   ├── custody-model.md
+│   └── wallet-security.md
+│
+├── 06-digital-assets
+│   ├── asset-framework.md
+│   ├── tokenisation.md
+│   ├── RWAs.md
+│   ├── carbon-assets.md
+│   └── energy-assets.md
+│
+├── 07-settlement
+│   ├── settlement-engine.md
+│   ├── treasury-system.md
+│   ├── reconciliation.md
+│   └── liquidity-management.md
+│
+├── 08-ai-platform
+│   ├── orchestrator.md
+│   ├── risk-engine.md
+│   ├── fraud-engine.md
+│   └── compliance-ai.md
+│
+├── 09-api
+│   ├── api-overview.md
+│   ├── authentication.md
+│   ├── webhooks.md
+│   ├── rate-limits.md
+│   └── errors.md
+│
+├── 10-sdk
+│   ├── javascript.md
+│   ├── typescript.md
+│   ├── react.md
+│   ├── mobile.md
+│   └── examples.md
+│
+├── 11-infrastructure
+│   ├── kubernetes.md
+│   ├── helm.md
+│   ├── terraform.md
+│   ├── deployment.md
+│   └── monitoring.md
+│
+├── 12-security
+│   ├── security-model.md
+│   ├── encryption.md
+│   ├── IAM.md
+│   ├── HSM.md
+│   └── incident-response.md
+│
+├── 13-compliance
+│   ├── PCI-DSS.md
+│   ├── SOC2.md
+│   ├── ISO27001.md
+│   ├── GDPR.md
+│   └── AML-KYC.md
+│
+├── 14-enterprise
+│   ├── SLA.md
+│   ├── governance.md
+│   ├── support.md
+│   └── operations.md
+│
+└── 15-tokenisation
+    ├── token-standard.md
+    ├── issuance.md
+    ├── lifecycle.md
+    └── compliance.md
+```
+
+---
+
+# 1. Platform Overview
+
+## 1.1 Introduction
+
+PowerChain Checkout™ is a programmable enterprise transaction infrastructure platform connecting:
+
+* Commerce applications
+* Payment providers
+* Blockchain networks
+* Digital assets
+* Treasury systems
+* Enterprise financial infrastructure
+
+The platform provides a unified API layer for accepting, managing, settling and automating financial transactions.
+
+---
+
+# 1.2 Platform Mission
+
+PowerChain Checkout™ transforms payment infrastructure from a transaction processor into an intelligent financial operating system.
+
+The platform enables:
+
+* Global commerce
+* Embedded finance
+* Digital asset settlement
+* Tokenised financial markets
+* Renewable energy markets
+* Carbon credit infrastructure
+* Enterprise treasury automation
+
+---
+
+# 2. Enterprise Architecture
+
+## 2.1 Logical Architecture
 
 ```mermaid
 flowchart TB
 
-A[Customer / Enterprise User]
+USER[Customers / Enterprises]
 
-B[Checkout Experience Layer]
+UI[Checkout Experience]
 
-C[PowerChain Checkout™ Core Platform]
+API[API Gateway]
 
-D[AI Commerce Orchestrator™]
+CORE[Checkout Core Platform]
 
-E[Payment Orchestration Layer]
+AI[AI Commerce Orchestrator]
 
-F[Wallet Infrastructure]
+PAY[Payment Engine]
 
-G[Digital Asset Engine]
+WALLET[Wallet Engine]
 
-H[Settlement Engine]
+ASSET[Digital Asset Engine]
 
-I[Treasury Engine]
+SETTLE[Settlement Engine]
 
-J[Compliance Engine]
+TREASURY[Treasury Platform]
 
-K[PowerChain Network™]
+CHAIN[Blockchain Networks]
 
-L[Solana Network]
+BANK[Banking Networks]
 
-M[Sui Network]
-
-N[Banking Networks]
-
-O[Enterprise Systems]
+ERP[Enterprise Systems]
 
 
-A --> B
+USER --> UI
 
-B --> C
+UI --> API
 
-C --> D
+API --> CORE
 
-D --> E
-D --> F
-D --> G
-D --> J
+CORE --> AI
 
-E --> H
+AI --> PAY
+AI --> WALLET
+AI --> ASSET
+AI --> SETTLE
 
-F --> K
-F --> L
-F --> M
+PAY --> BANK
+PAY --> CHAIN
 
-G --> K
-G --> L
-G --> M
+WALLET --> CHAIN
 
-H --> I
+ASSET --> CHAIN
 
-H --> K
-H --> L
-H --> M
-H --> N
+SETTLE --> TREASURY
 
-I --> O
-
-J --> O
+TREASURY --> ERP
 ```
 
 ---
 
-# 3. Core Architecture Layers
+# 3. Microservice Architecture
+
+PowerChain Checkout™ uses domain-based services.
+
+## Core Services
+
+| Service              | Responsibility       |
+| -------------------- | -------------------- |
+| Checkout Service     | Transaction creation |
+| Payment Service      | Payment execution    |
+| Wallet Service       | Wallet management    |
+| Asset Service        | Token management     |
+| Pricing Service      | Market pricing       |
+| Settlement Service   | Settlement execution |
+| Treasury Service     | Financial operations |
+| Identity Service     | Authentication       |
+| Compliance Service   | Risk controls        |
+| Notification Service | Communication        |
 
 ---
 
-# Layer 1 — Experience Layer
+# 4. Checkout Engine Specification
 
-## Purpose
+## 4.1 Checkout Session
 
-Provides customer and enterprise interaction interfaces.
-
-Components:
-
-* Hosted Checkout
-* Embedded Checkout
-* Checkout SDK
-* Mobile SDK
-* Payment Links
-* QR Checkout
-* Merchant Dashboard
-* Enterprise Command Centre™
-
-Architecture:
-
-```text
-Customer
-
- |
-
-Checkout UI
-
- |
-
-Checkout SDK
-
- |
-
-API Gateway
-```
-
----
-
-# Layer 2 — API Gateway Layer
-
-## Purpose
-
-The API Gateway provides secure access to platform services.
-
-Responsibilities:
-
-* Request authentication
-* API routing
-* Rate limiting
-* Request validation
-* Version management
-* Monitoring
-
-Supported:
-
-* REST APIs
-* Webhooks
-* Event APIs
-* SDK integrations
+A checkout session represents a customer transaction workflow.
 
 Example:
 
-```http
-POST /v1/checkout/session
-
-Authorization:
-Bearer API_KEY
+```json
+{
+"id":"chk_123456",
+"merchant":"merchant_id",
+"asset":"USDC",
+"amount":"100",
+"status":"pending"
+}
 ```
 
 ---
 
-# Layer 3 — Commerce Platform Layer
+## Checkout States
 
-## Purpose
+```text
+CREATED
 
-Manages enterprise commerce workflows.
+↓
 
-Services:
+AUTHENTICATING
 
-## Checkout Service
+↓
 
-Handles:
+PAYMENT_PENDING
 
-* Checkout sessions
-* Orders
-* Payment requests
-* Customer interactions
+↓
 
-## Invoice Service
+PROCESSING
 
-Handles:
+↓
 
-* Invoice creation
-* Payment tracking
-* Settlement status
+SETTLED
 
-## Subscription Service
+↓
 
-Handles:
-
-* Recurring billing
-* Usage-based billing
-* Enterprise subscriptions
-
-## Marketplace Service
-
-Handles:
-
-* Multi-vendor commerce
-* Revenue sharing
-* Seller settlements
+COMPLETED
+```
 
 ---
 
-# Layer 4 — Payment Orchestration Layer
+# 5. Payment Architecture
 
-## Purpose
+## Payment Flow
 
-Intelligently routes transactions across payment networks.
+```mermaid
+sequenceDiagram
+
+participant Customer
+
+participant Checkout
+
+participant PaymentEngine
+
+participant Blockchain
+
+participant Treasury
+
+
+Customer->>Checkout: Create Payment
+
+Checkout->>PaymentEngine: Validate Transaction
+
+PaymentEngine->>Blockchain: Execute Payment
+
+Blockchain-->>PaymentEngine: Confirmation
+
+PaymentEngine->>Treasury: Settlement
+
+Treasury-->>Checkout: Completed
+
+Checkout-->>Customer: Receipt
+```
+
+---
+
+# 6. Wallet Architecture
+
+## Embedded Wallet Model
 
 ```mermaid
 flowchart LR
 
-A[Payment Request]
+USER[User]
 
-B[Risk Evaluation]
+AUTH[Identity]
 
-C[Routing Engine]
+WALLET[Wallet Service]
 
-D[Payment Network]
+KEY[Key Management]
 
-E[Settlement]
+CHAIN[Blockchain]
 
-A --> B
 
-B --> C
+USER --> AUTH
 
-C --> D
+AUTH --> WALLET
 
-D --> E
+WALLET --> KEY
+
+KEY --> CHAIN
 ```
 
 ---
 
-## Payment Routing Engine
+Security:
 
-Decision factors:
+* MPC signing
+* HSM integration
+* Policy controls
+* Recovery workflows
+* Transaction approval rules
 
-* Cost
-* Liquidity
-* Availability
-* Settlement speed
-* Compliance rules
-* Merchant preferences
+---
 
-Example:
+# 7. Digital Asset Architecture
 
-```text
-Customer Payment
+## Asset Classes
 
-        |
+### Native Assets
 
-Routing Engine
+* PWRC
+* SOL
+* SUI
 
-        |
+### Stable Assets
 
-Decision
+* USDC
+* USDT
+* EURC
 
-USDC on Solana
+### Enterprise Assets
 
-        |
+* Carbon Credits
+* Renewable Energy Certificates
+* Security Tokens
+* Real World Assets
+* Tokenised Funds
 
-Settlement Complete
+---
+
+# 8. Tokenisation Framework
+
+## Asset Lifecycle
+
+```mermaid
+flowchart LR
+
+CREATE[Create Asset]
+
+VERIFY[Verify]
+
+ISSUE[Issue Token]
+
+TRANSFER[Transfer]
+
+SETTLE[Settlement]
+
+REDEEM[Redeem]
+
+
+CREATE --> VERIFY
+VERIFY --> ISSUE
+ISSUE --> TRANSFER
+TRANSFER --> SETTLE
+SETTLE --> REDEEM
 ```
 
 ---
 
-# Layer 5 — AI Commerce Orchestrator™
+# 9. AI Commerce Orchestrator™
 
-## Purpose
+## Components
 
-Provides intelligent automation across the transaction lifecycle.
-
-Services:
-
-## AI Routing Engine
+### Routing Intelligence
 
 Optimises:
 
-* Payment rail selection
-* Blockchain selection
+* Network selection
+* Payment method
 * Settlement path
+* Transaction cost
 
-## Fraud Intelligence Engine
+### Risk Intelligence
 
-Analyses:
+Evaluates:
 
-* Transaction behaviour
-* Wallet activity
-* Device signals
-* Historical patterns
+* Identity
+* Behaviour
+* Wallet history
+* Transaction patterns
 
-## Compliance Intelligence Engine
+### Compliance Intelligence
 
 Supports:
 
+* AML
 * KYC
 * KYB
-* AML
-* Sanctions screening
-* Risk scoring
-
-## Treasury Optimisation AI
-
-Optimises:
-
-* Liquidity
-* Asset allocation
-* Settlement timing
+* Screening
+* Monitoring
 
 ---
 
-# Layer 6 — Wallet Infrastructure Layer
+# 10. API Platform
 
-## Purpose
+## API Principles
 
-Provides enterprise-grade wallet capabilities.
+* REST-first
+* Versioned APIs
+* OAuth authentication
+* Webhooks
+* Idempotency support
+* Enterprise rate limiting
 
-Architecture:
+---
 
-```mermaid
-flowchart TB
+## API Domains
 
-A[User Identity]
+```
+/checkout
 
-B[Wallet Service]
+/payments
 
-C[Key Management]
+/wallets
 
-D[MPC / HSM Security]
+/assets
 
-E[Blockchain Network]
+/settlements
 
+/treasury
 
-A --> B
+/customers
 
-B --> C
-
-C --> D
-
-D --> E
+/webhooks
 ```
 
 ---
 
-## Wallet Features
+# 11. Event Platform
 
-* Embedded wallets
-* Self-custody support
-* Institutional custody
-* MPC security
-* Multi-signature wallets
-* Recovery mechanisms
-* Transaction policies
-
-Supported:
-
-### Solana
-
-* Phantom
-* Solflare
-* Backpack
-* Ledger
-
-### Sui
-
-* Slush
-* Nightly
-* Ledger
-
-### Native
-
-* PowerChain Wallet™
-
----
-
-# Layer 7 — Digital Asset Layer
-
-## Purpose
-
-Manages programmable assets.
-
-Supported assets:
-
-## Native Assets
-
-```
-PWRC
-SOL
-SUI
-```
-
-## Stablecoins
-
-```
-USDC
-USDT
-EURC
-```
-
-## Enterprise Assets
-
-```
-Carbon Credit Tokens
-Renewable Energy Tokens
-Security Tokens
-RWAs
-Tokenised Funds
-Utility Tokens
-```
-
----
-
-# Layer 8 — Settlement Layer
-
-## Purpose
-
-Provides programmable financial settlement.
-
-Settlement types:
-
-## Instant Settlement
-
-Real-time execution.
-
-## Scheduled Settlement
-
-Enterprise batch processing.
-
-## Net Settlement
-
-Optimised reconciliation.
-
-## Programmable Settlement
-
-Automated financial workflows.
-
-Architecture:
+## Event Bus
 
 ```mermaid
 flowchart LR
 
-A[Transaction]
+SERVICE[Services]
 
-B[Settlement Router]
+EVENT[Event Gateway]
 
-C[Liquidity Engine]
+QUEUE[Message Broker]
 
-D[Treasury]
+WORKER[Workers]
 
-E[Final Settlement]
+ANALYTICS[Analytics]
 
 
-A --> B
+SERVICE --> EVENT
 
-B --> C
+EVENT --> QUEUE
 
-C --> D
+QUEUE --> WORKER
 
-D --> E
+QUEUE --> ANALYTICS
 ```
 
 ---
-
-# Layer 9 — Treasury Infrastructure
-
-## Purpose
-
-Enterprise financial management.
-
-Capabilities:
-
-* Multi-asset treasury
-* Stablecoin management
-* Liquidity management
-* Revenue distribution
-* Financial reporting
-* Asset reconciliation
-
----
-
-# Layer 10 — Blockchain Connectivity Layer
-
-## Supported Networks
-
-```mermaid
-flowchart TB
-
-A[PowerChain Checkout™]
-
-B[PowerChain Network™]
-
-C[Solana]
-
-D[Sui]
-
-E[Banking Infrastructure]
-
-
-A --> B
-
-A --> C
-
-A --> D
-
-A --> E
-```
-
----
-
-# Layer 11 — Data Architecture
-
-## Data Flow
-
-```mermaid
-flowchart LR
-
-A[Transactions]
-
-B[Event Streaming]
-
-C[Processing Layer]
-
-D[Analytics Platform]
-
-E[Enterprise Reporting]
-
-
-A --> B
-
-B --> C
-
-C --> D
-
-D --> E
-```
-
----
-
-## Data Components
-
-* PostgreSQL
-* Redis
-* Event Streaming
-* Data Warehouse
-* Analytics Engine
-* Audit Storage
-
----
-
-# Layer 12 — Event Architecture
-
-PowerChain Checkout™ uses event-driven infrastructure.
 
 Events:
 
 ```
-payment.created
-
-payment.authorised
+checkout.created
 
 payment.completed
 
-payment.failed
+wallet.updated
 
-wallet.created
-
-asset.transferred
+asset.issued
 
 settlement.completed
-
-treasury.updated
-```
-
-Architecture:
-
-```mermaid
-flowchart LR
-
-A[Service]
-
-B[Event Gateway]
-
-C[Message Broker]
-
-D[Consumers]
-
-A --> B
-
-B --> C
-
-C --> D
 ```
 
 ---
 
-# Layer 13 — Security Architecture
-
-## Security Model
-
-Based on:
-
-* Zero Trust Architecture
-* Defence in depth
-* Least privilege access
-* Continuous monitoring
-
-Security layers:
-
-```mermaid
-flowchart TB
-
-A[Identity Security]
-
-B[Application Security]
-
-C[Infrastructure Security]
-
-D[Blockchain Security]
-
-E[Audit Security]
-
-
-A --> B
-
-B --> C
-
-C --> D
-
-D --> E
-```
-
----
-
-## Controls
-
-### Identity
-
-* OAuth 2.1
-* OIDC
-* Passkeys
-* MFA
-* RBAC
-
-### Infrastructure
-
-* Encryption
-* Secrets management
-* Network isolation
-* Container security
-
-### Blockchain
-
-* Multi-signature controls
-* Transaction monitoring
-* Address screening
-
----
-
-# Layer 14 — Cloud Native Deployment
+# 12. Cloud Infrastructure
 
 ## Production Architecture
 
 ```mermaid
 flowchart TB
 
-A[Developer]
+DEV[Developer]
 
-B[Git Repository]
+GIT[Git Repository]
 
-C[CI/CD Pipeline]
+CI[CI/CD]
 
-D[Container Registry]
+REG[Container Registry]
 
-E[Kubernetes Cluster]
+K8S[Kubernetes]
 
-F[Production Services]
+SERVICES[Microservices]
+
+DB[(Database)]
+
+MON[Observability]
 
 
-A --> B
+DEV --> GIT
 
-B --> C
+GIT --> CI
 
-C --> D
+CI --> REG
 
-D --> E
+REG --> K8S
 
-E --> F
+K8S --> SERVICES
+
+SERVICES --> DB
+
+SERVICES --> MON
 ```
 
 ---
 
-## Infrastructure Stack
+Technology:
 
-| Layer          | Technology    |
-| -------------- | ------------- |
-| Runtime        | Kubernetes    |
-| Containers     | Docker        |
-| Infrastructure | Terraform     |
-| Deployment     | Helm          |
-| GitOps         | ArgoCD        |
-| Monitoring     | Prometheus    |
-| Dashboards     | Grafana       |
-| Tracing        | OpenTelemetry |
+* Kubernetes
+* Docker
+* Terraform
+* Helm
+* ArgoCD
+* Prometheus
+* Grafana
+* OpenTelemetry
 
 ---
 
-# Layer 15 — Enterprise Operations
+# 13. Security Architecture
 
-## Enterprise Command Centre™
+## Security Layers
+
+```text
+Identity Security
+
+↓
+
+Application Security
+
+↓
+
+Infrastructure Security
+
+↓
+
+Blockchain Security
+
+↓
+
+Audit Security
+```
+
+---
+
+Controls:
+
+* Zero Trust
+* Encryption
+* RBAC
+* Secrets management
+* HSM
+* Audit logging
+* Monitoring
+
+---
+
+# 14. Enterprise Compliance
+
+Supported frameworks:
+
+* PCI DSS
+* SOC 2 Type II
+* ISO 27001
+* GDPR
+* AML
+* KYC
+* PSD2
+* ISO 20022
+
+---
+
+# 15. Developer Platform
+
+Supported SDKs:
+
+* JavaScript
+* TypeScript
+* React
+* React Native
+* Flutter
+* Python
+* Go
+* Java
+* .NET
+
+Developer resources:
+
+* API reference
+* SDK examples
+* Sandbox
+* Webhook testing
+* Deployment guides
+
+---
+
+# 16. Enterprise Operations
+
+## Command Centre™
 
 Provides:
 
-### Commerce Operations
-
-* Orders
-* Customers
-* Billing
-* Products
-
-### Payment Operations
-
-* Transactions
-* Refunds
-* Settlement
-
-### Digital Asset Operations
-
-* Wallets
-* Tokens
-* Asset activity
-
-### Treasury Operations
-
-* Balances
-* Liquidity
-* Reports
+* Transaction monitoring
+* Merchant management
+* Treasury analytics
+* Compliance reporting
+* System health
 
 ---
 
-# 16. Architecture Principles
+# 17. Reliability Engineering
 
-PowerChain Checkout™ follows:
+Targets:
 
-## Modular Design
+## Availability
 
-Independent scalable services.
+99.99% platform availability
 
-## API First
+## Architecture
 
-Every capability exposed through secure APIs.
-
-## Cloud Native
-
-Designed for Kubernetes deployment.
-
-## Multi-Network
-
-Supports multiple blockchain and financial networks.
-
-## Enterprise Security
-
-Security integrated at every layer.
-
-## Programmable Finance
-
-Transactions become programmable workflows.
+* Multi-region deployment
+* Automated failover
+* Backup systems
+* Disaster recovery
+* Observability
 
 ---
 
-# PowerChain Checkout™ Architecture v1.0 Beta
+# 18. Version Information
 
-**Enterprise Commerce Infrastructure**
+```
+Product:
 
-Built on:
+PowerChain Checkout™
 
-**PowerChain Network™**
+Version:
 
-Powered by:
+1.0 Beta
 
-**PowerChain Virtual Machine™ (PVM™)**
+Status:
 
-Designed for:
+Public Beta
 
-* Enterprise Commerce
+Architecture:
+
+Enterprise Cloud Native
+
+Network:
+
+PowerChain Network™
+
+Runtime:
+
+PowerChain Virtual Machine™
+```
+
+---
+
+# PowerChain Checkout™
+
+## Enterprise Transaction Infrastructure for the Programmable Economy
+
+Built for:
+
+* Commerce
 * Digital Assets
-* Tokenised Finance
-* Renewable Energy Markets
+* Tokenisation
+* Energy Markets
 * Carbon Markets
-* Institutional Settlement
+* Institutional Finance
 
 © 2026 PowerChain™
