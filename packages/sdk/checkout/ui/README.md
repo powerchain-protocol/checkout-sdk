@@ -1,4 +1,3 @@
-# PowerChain Checkout™
+# PowerChain Checkout™ SDK
 
-• /src
-• /ui
+• src
