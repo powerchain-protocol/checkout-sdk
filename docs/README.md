@@ -1,7 +1,8 @@
 # PowerChain Checkout - Technical Documentation
-Version 1.0 Beta
 
 **Enterprise Commerce, Payment Orchestration & Programmable Settlement Platform**
+
+Version 1.0 Beta
 
 ---
 
