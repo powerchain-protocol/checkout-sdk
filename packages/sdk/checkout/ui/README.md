@@ -118,7 +118,7 @@ R --> S[Kubernetes Infrastructure]
 # Repository Architecture
 
 ```
-powerchain-platform-sdk/
+checkout-sdk/
 
 ├── apps/
 │   ├── checkout-demo
