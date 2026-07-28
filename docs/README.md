@@ -1,40 +1,43 @@
-# PowerChain Documentation
+# PowerChain Checkout™ SDK Documentation
 
-> **Enterprise Documentation Portal for the PowerChain Platform™**
+> **Enterprise Documentation for PowerChain Checkout™ UI SDK**
 
-Welcome to the official documentation for the **PowerChain Platform™**—an enterprise-grade digital infrastructure platform for programmable finance, renewable energy, digital assets, artificial intelligence and modern commerce.
+Welcome to the official documentation for **PowerChain Checkout™ UI SDK**, the enterprise checkout, payment orchestration and commerce experience platform built on the **PowerChain Platform™**.
 
-The documentation is designed for developers, architects, enterprises, financial institutions, governments and ecosystem partners, providing everything needed to design, build, deploy and operate applications on the PowerChain ecosystem.
+The SDK enables developers and enterprises to build secure, scalable and composable checkout experiences, embedded payment flows, digital wallets, programmable settlement and digital asset commerce using a modern, cloud-native architecture.
+
+Designed for developers, solution architects, merchants, fintechs, marketplaces, financial institutions and enterprise platforms, the documentation provides comprehensive guidance from initial setup through production deployment.
 
 ---
 
 # Documentation Overview
 
-The documentation is organised into logical domains, covering every aspect of the PowerChain platform—from getting started through production deployment.
-
 ```text
 Getting Started
         │
         ▼
-Platform Architecture
+Architecture
         │
         ▼
-Developer Guides
+Runtime
         │
         ▼
-SDKs & APIs
+Checkout
         │
         ▼
-Applications
+Payments
+        │
+        ▼
+Wallets
+        │
+        ▼
+Settlement
         │
         ▼
 Deployment
         │
         ▼
 Operations
-        │
-        ▼
-Enterprise Governance
 ```
 
 ---
@@ -50,84 +53,100 @@ docs/
 │   ├── introduction.md
 │   ├── installation.md
 │   ├── quick-start.md
-│   ├── first-application.md
+│   ├── configuration.md
+│   ├── first-checkout.md
 │   └── faq.md
 │
 ├── architecture/
 │   ├── platform-overview.md
-│   ├── enterprise-architecture.md
+│   ├── layered-architecture.md
 │   ├── runtime.md
-│   ├── execution-engine.md
-│   ├── networking.md
-│   ├── security-model.md
+│   ├── payment-flow.md
 │   ├── event-driven.md
-│   └── scalability.md
-│
-├── platform/
-│   ├── overview.md
-│   ├── products.md
-│   ├── business-domains.md
-│   ├── platform-services.md
-│   ├── identity.md
-│   ├── ai-platform.md
+│   ├── plugin-system.md
+│   ├── security-model.md
 │   └── observability.md
+│
+├── runtime/
+│   ├── overview.md
+│   ├── runtime-profiles.md
+│   ├── configuration.md
+│   ├── feature-flags.md
+│   ├── environment-switching.md
+│   ├── multi-tenancy.md
+│   └── service-registry.md
+│
+├── checkout/
+│   ├── overview.md
+│   ├── checkout-session.md
+│   ├── shopping-cart.md
+│   ├── pricing.md
+│   ├── discounts.md
+│   ├── taxes.md
+│   ├── payment-methods.md
+│   ├── receipts.md
+│   └── events.md
+│
+├── payments/
+│   ├── overview.md
+│   ├── providers.md
+│   ├── payment-routing.md
+│   ├── billing.md
+│   ├── subscriptions.md
+│   ├── refunds.md
+│   ├── settlement.md
+│   ├── reconciliation.md
+│   └── reporting.md
+│
+├── wallets/
+│   ├── overview.md
+│   ├── embedded-wallet.md
+│   ├── solana-wallets.md
+│   ├── walletconnect.md
+│   ├── custodial.md
+│   ├── permissions.md
+│   └── security.md
+│
+├── blockchain/
+│   ├── powerchain-network.md
+│   ├── pvm.md
+│   ├── transactions.md
+│   ├── programs.md
+│   ├── token-2022.md
+│   ├── spl-tokens.md
+│   ├── helius.md
+│   ├── jupiter.md
+│   └── pyth.md
+│
+├── ui/
+│   ├── overview.md
+│   ├── design-system.md
+│   ├── themes.md
+│   ├── typography.md
+│   ├── colours.md
+│   ├── spacing.md
+│   ├── icons.md
+│   ├── accessibility.md
+│   └── components.md
 │
 ├── sdk/
 │   ├── javascript.md
+│   ├── typescript.md
 │   ├── react.md
-│   ├── vue.md
-│   ├── angular.md
-│   ├── node.md
-│   ├── python.md
-│   ├── go.md
-│   ├── rust.md
-│   └── flutter.md
-│
-├── api/
-│   ├── overview.md
-│   ├── authentication.md
-│   ├── wallets.md
-│   ├── payments.md
-│   ├── treasury.md
-│   ├── marketplace.md
-│   ├── exchange.md
-│   ├── energy.md
-│   ├── ai.md
-│   ├── governance.md
-│   ├── webhooks.md
-│   ├── errors.md
-│   └── versioning.md
-│
-├── blockchain/
-│   ├── network.md
-│   ├── pvm.md
-│   ├── programs.md
-│   ├── transactions.md
-│   ├── token-2022.md
-│   ├── wallets.md
-│   ├── rpc.md
-│   ├── validators.md
-│   └── consensus.md
-│
-├── applications/
-│   ├── checkout.md
-│   ├── payments.md
-│   ├── marketplace.md
-│   ├── renewable-energy.md
-│   ├── token-sale.md
-│   ├── treasury.md
-│   ├── ai-platform.md
-│   └── digital-assets.md
-│
-├── examples/
 │   ├── nextjs.md
-│   ├── react.md
-│   ├── vue.md
-│   ├── node.md
-│   ├── express.md
 │   ├── react-native.md
-│   ├── docker.md
-│   └── kubernetes.md
+│   ├── api-reference.md
+│   └── migration.md
+│
+├── plugins/
+│   ├── overview.md
+│   ├── architecture.md
+│   ├── lifecycle.md
+│   ├── payment-providers.md
+│   ├── ui-extensions.md
+│   ├── hooks.md
+│   ├── publishing.md
+│   └── marketplace.md
 │
 ├── deployment/
 │   ├── docker.md
@@ -142,9 +161,10 @@ docs/
 │   ├── monitoring.md
 │   ├── logging.md
 │   ├── telemetry.md
+│   ├── metrics.md
+│   ├── alerts.md
 │   ├── backups.md
 │   ├── runbooks.md
-│   ├── maintenance.md
 │   └── troubleshooting.md
 │
 ├── security/
@@ -154,28 +174,30 @@ docs/
 │   ├── jwt.md
 │   ├── passkeys.md
 │   ├── encryption.md
-│   ├── compliance.md
 │   ├── audit.md
+│   ├── compliance.md
 │   └── threat-model.md
 │
 ├── governance/
-│   ├── architecture.md
-│   ├── coding-standards.md
+│   ├── architecture-review.md
 │   ├── api-review.md
+│   ├── coding-standards.md
 │   ├── release-process.md
-│   ├── adr.md
-│   └── deprecation-policy.md
+│   ├── deprecation-policy.md
+│   └── adr.md
 │
-├── integrations/
-│   ├── helius.md
-│   ├── jupiter.md
-│   ├── pyth.md
-│   ├── stripe.md
-│   ├── walletconnect.md
-│   └── enterprise.md
+├── examples/
+│   ├── react.md
+│   ├── nextjs.md
+│   ├── vite.md
+│   ├── node.md
+│   ├── express.md
+│   ├── react-native.md
+│   ├── docker.md
+│   └── kubernetes.md
 │
 └── release-notes/
-    ├── v1.0.0-beta.md
+    ├── v1.0.0-beta.0.md
     ├── changelog.md
     └── roadmap.md
 ```
@@ -185,20 +207,22 @@ docs/
 # Documentation Categories
 
 | Category | Description |
-|----------|-------------|
-| **Getting Started** | Installation, onboarding and first applications |
-| **Architecture** | Enterprise architecture, platform design and runtime |
-| **Platform** | Products, services, identity, AI and shared platform capabilities |
-| **SDKs** | JavaScript, TypeScript, React, Node.js and language SDKs |
-| **API Reference** | REST, GraphQL, JSON-RPC and OpenAPI documentation |
-| **Blockchain** | PowerChain Network™, PVM™, programs, wallets and transactions |
-| **Applications** | Checkout™, Marketplace™, Treasury™, Renewable Energy™, AI Platform™ |
+|-----------|-------------|
+| **Getting Started** | Installation, onboarding and first checkout integration |
+| **Architecture** | Enterprise platform architecture and design principles |
+| **Runtime** | Runtime profiles, configuration and environment management |
+| **Checkout** | Checkout sessions, carts, pricing and customer journeys |
+| **Payments** | Payment orchestration, billing, subscriptions and settlement |
+| **Wallets** | Embedded wallets, Solana wallets and identity |
+| **Blockchain** | PowerChain Network™, PVM™, SPL Tokens and blockchain integration |
+| **UI Components** | Design system, themes, accessibility and React components |
+| **SDK** | JavaScript, TypeScript, React and Next.js integration guides |
+| **Plugins** | Plugin SDK, extensions, payment providers and marketplace |
+| **Deployment** | Docker, Kubernetes, Helm, Terraform and production deployment |
+| **Operations** | Monitoring, observability, telemetry and operational runbooks |
+| **Security** | Authentication, encryption, compliance and audit logging |
+| **Governance** | Architecture reviews, API governance and release management |
 | **Examples** | Production-ready reference applications and templates |
-| **Deployment** | Docker, Kubernetes, Helm, Terraform and cloud deployments |
-| **Operations** | Monitoring, observability, logging and operational runbooks |
-| **Security** | Authentication, authorisation, compliance and encryption |
-| **Governance** | Architecture decisions, coding standards and release management |
-| **Integrations** | Third-party services and enterprise connectors |
 | **Release Notes** | Version history, migration guides and roadmap |
 
 ---
@@ -215,29 +239,26 @@ Installation
 Quick Start
       │
       ▼
-Architecture
+Checkout Integration
       │
       ▼
-SDK Guides
+Payments
       │
       ▼
-API Reference
+Wallet Integration
       │
       ▼
-Examples
+Production Deployment
       │
       ▼
-Deployment
-      │
-      ▼
-Production Operations
+Operations
 ```
 
 ---
 
 # Documentation Standards
 
-Every document follows a consistent structure:
+Every document follows a consistent structure.
 
 ```markdown
 # Title
@@ -268,66 +289,86 @@ Every document follows a consistent structure:
 # Enterprise Documentation Features
 
 - Enterprise Architecture Diagrams
-- API-First Documentation
+- Layered Platform Documentation
+- Runtime Profiles (Mock, Demo, Sandbox, Production)
 - OpenAPI 3.1 Reference
-- TypeDoc Generated SDK Documentation
-- Interactive Examples
+- TypeDoc API Documentation
+- Storybook Component Library
 - Production Deployment Guides
 - Kubernetes & Helm Documentation
-- Security Best Practices
-- Governance & ADRs
-- AI & Renewable Energy Platform Guides
+- Security & Compliance Guides
+- Plugin Development
 - Operational Runbooks
 - Migration Guides
 - Versioned Documentation
 
 ---
 
-# Supported Products
+# Runtime Profiles
 
-The documentation covers the complete PowerChain product ecosystem.
+PowerChain Checkout™ supports configuration-driven runtime environments with no application code changes.
 
-- PowerChain Platform™
-- PowerChain Network™
-- PowerChain Virtual Machine (PVM™)
-- PowerChain Web3.js™
+```text
+Local Development
+        │
+        ▼
+Mock Runtime
+        │
+        ▼
+Demo Runtime
+        │
+        ▼
+Sandbox Runtime
+        │
+        ▼
+Staging Runtime
+        │
+        ▼
+Production Runtime
+```
+
+---
+
+# Supported Platform Components
+
+The documentation covers the complete PowerChain Checkout™ ecosystem.
+
 - PowerChain Checkout™
 - PowerPay Gateway™
 - PowerChain Wallet™
-- PowerChain Marketplace™
-- PowerChain Renewable Energy™
-- PowerChain Token Sale™
-- PowerChain Treasury™
-- PowerChain AI™
-- PowerChain Enterprise™
-- PowerChain Developer Platform™
+- PowerChain Runtime™
+- PowerChain UI™
+- PowerChain Plugin SDK™
+- PowerChain Analytics™
+- PowerChain Network™
+- PowerChain Virtual Machine (PVM™)
+- PowerChain Web3.js™
 
 ---
 
 # Enterprise Principles
 
-The documentation is maintained according to enterprise software engineering standards.
-
 - API-First Development
-- Documentation as Code
-- Open Standards
-- Cloud-Native Architecture
+- Component-Driven Architecture
+- Cloud-Native Design
 - Security by Design
 - Zero Trust Security
+- Plugin-Based Extensibility
 - Domain-Driven Design (DDD)
 - Event-Driven Architecture
 - Infrastructure as Code
+- Documentation as Code
 - Semantic Versioning
-- Backwards Compatibility
 - Enterprise Observability
+- Backwards Compatibility
 
 ---
 
 # Contributing
 
-We welcome contributions from developers, enterprises and ecosystem partners.
+We welcome contributions from developers, partners and enterprise customers.
 
-Please review the following documents before contributing:
+Before contributing, please review:
 
 - `CONTRIBUTING.md`
 - `CODE_OF_CONDUCT.md`
@@ -338,8 +379,8 @@ Please review the following documents before contributing:
 
 # Version
 
-**PowerChain Documentation Portal**
+**PowerChain Checkout™ UI SDK Documentation**
 
-**Version:** **v1.0.0-beta**
+**Version:** **v1.0.0-beta.0**
 
-Enterprise documentation for the PowerChain Platform™, providing comprehensive guidance for building secure, scalable and AI-native applications across programmable finance, digital assets, renewable energy and enterprise commerce.
+Enterprise documentation for the PowerChain Checkout™ platform, providing comprehensive guidance for building secure, scalable and intelligent checkout experiences, payment infrastructure and programmable commerce applications on the PowerChain Platform™.
