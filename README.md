@@ -151,7 +151,7 @@ Real-time pricing:
 
 | Checkout | Investor Workspace |
 |-----------|-------------------|
-| ![](assets/screenshots/checkout.png) | ![](assets/screenshots/investor-dashboard.png) |
+| ![](assets/architecture/checkout-dashboard.png) | ![](assets/architecture/checkout-dashboard.png) |
 
 
 ## Invoice & Architecture
