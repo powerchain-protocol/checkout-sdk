@@ -1,551 +1,609 @@
-<p align="center">
-  <img src="./assets/architecture/checkout-architecture.png"
-       alt="PowerChain Checkout Architecture"
-       width="1000">
-</p>
+# PowerChain Checkout™
 
+<p align="center">
+<img src="./assets/architecture/checkout-architecture.png"
+alt="PowerChain Checkout Architecture"
+width="1200">
+</p>
 <h1 align="center">
 PowerChain Checkout™
 </h1>
-
 <p align="center">
-Enterprise Commerce, Payments & Digital Asset Settlement Platform
+<strong>Enterprise Commerce, Payment Orchestration & Digital Asset Settlement Infrastructure</strong>
 </p>
-
 <p align="center">
 
-<strong>Version 1.0 Beta</strong>
+Version 1.0 Beta
+Enterprise Foundation Release Candidate
 
 <br>
 
-Secure • Intelligent • Cloud Native • Institutional Grade
+Secure • Programmable • Cloud Native • Institutional Grade
 
 </p>
 
-<p align="center">
+⸻
 
-<img src="https://img.shields.io/badge/version-1.0--beta-0F5A3D?style=for-the-badge">
-<img src="https://img.shields.io/badge/license-Apache%202.0-darkgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/network-PowerChain-darkgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/runtime-PVM-darkgreen?style=for-the-badge">
-<img src="https://img.shields.io/badge/status-Beta-blue?style=for-the-badge">
+Platform Mission
 
-</p>
+PowerChain Checkout™ provides the financial experience infrastructure layer for modern digital commerce.
 
----
+The platform enables organisations to build:
 
-# Overview
-
-PowerChain Checkout™ is an enterprise-grade commerce, payment orchestration, and digital asset settlement platform built on the PowerChain Network™.
-
-The platform enables businesses, institutions, merchants, developers, and financial organisations to accept payments, manage digital assets, issue invoices, settle transactions, and integrate blockchain-native financial infrastructure.
-
-PowerChain Checkout combines:
-
-- Enterprise payment processing
-- Digital asset settlement
-- Embedded wallets
-- Merchant infrastructure
-- Treasury management
-- Real-time pricing
-- Multi-chain interoperability
-- Institutional security
-
-Powered by:
-
-- PowerChain Network™
-- PowerChain Virtual Machine™ (PVM) - TBA
-- PWRC Digital Asset Infrastructure
-
----
-
-# Contents
-
-- Overview
-- Platform Capabilities
-- Product Screens
-- Architecture
-- Checkout Workspace
-- Embedded Wallet
-- Pricing Engine
-- Transaction Lifecycle
-- API Platform
-- Security
-- Enterprise Integrations
-- Technology Stack
-- Repository Structure
-- Documentation
-- Roadmap
-- Related Products
-
----
-
-# Platform Capabilities
-
-## Enterprise Checkout
-
-PowerChain Checkout™ provides a complete payment experience for Web3 and enterprise commerce.
-
-Features:
-
-- Digital asset payments
-- Stablecoin settlement
-- Instant transaction confirmation
-- Merchant checkout widgets
-- Payment links
-- Invoice payments
-- Subscription-ready infrastructure
-
-
-## Digital Asset Settlement
-
-Supported assets:
-
-- PWRC
-- SOL
-- USDC
-- SUI
-
-
-## Wallet Infrastructure
-
-Supported wallets:
-
-- Embedded Wallet
-- Phantom
-- Solflare
-- Backpack
-- WalletConnect
-
-
-## Payment Providers
-
-Integrated payment infrastructure:
-
-- Solana Pay
-- MoonPay
-- Coinbase Pay
-
-
-## Market Data Infrastructure
-
-Real-time pricing:
-
-- Pyth Network
-- Birdeye
-- CoinMarketCap
-
-
----
-
-# Product Screens
-
-## Dasboard UI/UX Experience
-
-| User Dashboard | Investor Workspace |
-|-----------|-------------------|
-| ![](assets/screenshots/checkout.png) | ![](assets/screenshots/investor-dashboard.png) |
-
-
-## Checkout Experience
-
-| Checkout Plugin | Investor Workspace |
-|-----------|-------------------|
-| ![](assets/architecture/checkout-plugin.png) | ![](assets/architecture/checkout-dashboard.png) |
-
-
-## Invoice & Architecture
-
-| Invoice System | Architecture |
-|----------------|--------------|
-| ![](assets/screenshots/invoice.png) | ![](assets/architecture/checkout-architecture.png) |
-
-
----
-
-# Enterprise Architecture (Core Platform Integration)
-
-<p align="center">
-
-<img src="./assets/architecture/checkout-architecture.png"
-width="1000">
-
-</p>
-
-
-PowerChain Checkout™ follows a cloud-native modular architecture designed for enterprise deployment.
-
-Architecture layers:
-
-```
-
-```
-                Users
-                  |
-          Checkout Interface
-                  |
-    --------------------------------
-    Payment Orchestration Layer
-    --------------------------------
-      |              |             |
- Wallets        Pricing       Settlement
-      |              |             |
- Solana        Pyth Oracle     PowerChain
-      |
- Digital Assets
-      |
- Treasury Layer
-      |
- Enterprise Systems
-```
-
-```
-
----
-
-# Checkout Workspace
-
-The Checkout Workspace provides merchants and enterprises with:
-
-- Payment creation
-- Invoice management
-- Transaction history
-- Settlement tracking
-- Customer management
-- Reporting
-
-
----
-
-# Embedded Wallet
-
-PowerChain Checkout™ includes secure wallet infrastructure.
-
-Capabilities:
-
-- User onboarding without seed phrases
-- Enterprise authentication
-- Secure signing
-- Wallet recovery
-- Multi-device support
-
-
-Authentication:
-
-- OAuth 2.1
-- OpenID Connect
-- Passkeys
-
-
----
-
-# Pricing Engine
-
-Real-time pricing infrastructure powered by oracle-based market data.
-
-Features:
-
-- Asset conversion
-- Exchange rate calculation
-- Price impact monitoring
-- Historical pricing
-- Treasury valuation
-
-
----
-
-# Transaction Lifecycle
-
-```
-
-Customer
-
-|
-
-Checkout Request
-
-|
-
-Payment Validation
-
-|
-
-Wallet Authorization
-
-|
-
-Blockchain Settlement
-
-|
-
-Treasury Processing
-
-|
-
-Merchant Confirmation
-
-````
-
----
-
-# API Platform
-
-PowerChain Checkout™ provides developer APIs for:
-
-- Payments
-- Wallets
-- Transactions
-- Invoices
-- Settlement
-- Pricing
-- Treasury
-
-
-Example:
-
-```http
-POST /api/v1/payment/create
-
-{
- "asset":"PWRC",
- "amount":"1000",
- "merchant":"example"
-}
-````
-
----
-
-# Security
-
-Security architecture includes:
-
-## Identity
-
-* OAuth 2.1
-* OpenID Connect
-* Passkeys
-* Role-based access control
-
-## Blockchain Security
-
-* Multi-signature treasury controls
-* Transaction monitoring
-* Smart contract security
-* Audit-ready infrastructure
-
-## Infrastructure Security
-
-* Kubernetes isolation
-* Secrets management
-* Encryption at rest
-* Encryption in transit
-* Zero-trust architecture
-
----
-
-# Enterprise Integrations
-
-## Identity
-
-* OAuth 2.1
-* OpenID Connect
-* Passkeys
-
-## Banking
-
-* Treasury APIs
-* Banking APIs
-
-## ERP
-
-* SAP
-* Oracle
-* Microsoft Dynamics
-
-## CRM
-
-* Salesforce
-* HubSpot
-
-## Messaging
-
-* Email
-* SMS
-* Push Notifications
-
-## Analytics
-
-* PowerChain Analytics™
-* OpenTelemetry
-* Prometheus
-* Grafana
-
----
-
-# Repository Structure
-
-```
-checkout/
-
-├── apps/
-│   ├── checkout/
-│   ├── dashboard/
-│   └── admin/
-
-├── packages/
-│
-├── services/
-│   ├── payments/
-│   ├── settlement/
-│   ├── wallet/
-│   └── pricing/
-
-├── api/
-
-├── docs/
-
-├── assets/
-
-├── scripts/
-
-├── infrastructure/
-
-├── kubernetes/
-
-├── terraform/
-
-└── README.md
-```
-
----
-
-# Technology Stack
-
-| Layer          | Technology                           |
-| -------------- | ------------------------------------ |
-| Frontend       | React · Next.js · TypeScript         |
-| UI             | Tailwind CSS · shadcn/ui             |
-| Backend        | Node.js · Fastify · NestJS           |
-| Database       | PostgreSQL                           |
-| Cache          | Redis                                |
-| Queue          | Kafka / Redpanda                     |
-| Storage        | S3 Compatible Storage                |
-| Search         | OpenSearch                           |
-| Runtime        | PowerChain Virtual Machine™          |
-| Network        | PowerChain Network™                  |
-| Infrastructure | Kubernetes · Docker · Terraform      |
-| Monitoring     | Prometheus · Grafana · OpenTelemetry |
-| Authentication | OAuth 2.1 · OIDC · Passkeys          |
-
----
-
-# Documentation
-
-Complete documentation:
-
-```
-docs.powerchain.energy
-```
-
-Documentation includes:
-
-* Architecture Specification
-* API Reference
-* Developer Guide
-* Security Model
-* Token Integration
-* Enterprise Deployment Guide
-
----
-
-# Roadmap
-
-## Version 1.0 Beta
-
-Completed:
-
-* Enterprise Checkout
-* Embedded Wallet
-* Solana Pay Integration
-* MoonPay Integration
-* Coinbase Pay Integration
-* Invoice Generation
-* Treasury Settlement
-* Live Pricing
-* Pyth Oracle Integration
-* Investor Dashboard
-
-## Version 1.1
-
-Planned:
-
-* Shopify Plugin
-* WooCommerce Plugin
-* Magento Integration
-* Salesforce Connector
-* HubSpot Integration
-
-## Version 2.0
-
-Future:
-
-* Subscription Billing
-* Marketplace APIs
-* Multi-chain Settlement
-* Merchant Portal
-* Enterprise POS
-* Mobile SDK
-* AI Fraud Detection
-
----
-
-# Related Products
-
-## PowerChain Payments™ (PowerPay)
-
-Enterprise payment processing infrastructure.
-
-## PowerChain Asset Management Platform™
-
-Digital asset treasury and investment management platform.
-
-## PowerChain Energy™
-
-Renewable energy infrastructure and carbon market ecosystem.
-
-## PWRC Token
-
-Native utility asset powering the PowerChain ecosystem.
-
----
-
-# Enterprise Platform
-
-## PowerChain Enterprise Platform™
-
-Enterprise digital infrastructure for:
-
-* Digital Assets
-* Capital Markets
-* Renewable Energy
-* Carbon Markets
-* Commerce
-* Artificial Intelligence
+* Payment experiences
+* Digital asset marketplaces
+* Treasury systems
+* Subscription platforms
+* Tokenized commerce
+* Energy marketplaces
+* Institutional settlement workflows
 
 Built on:
 
-**PowerChain Network™**
+PowerChain Platform™
+        ↓
+PowerChain Runtime Core™
+        ↓
+PowerPay Payment Gateway™
+        ↓
+Solana Enterprise Layer™
+        ↓
+Digital Asset Infrastructure
 
-Powered by:
+⸻
 
-**PowerChain Virtual Machine™ (PVM)**
+Release Identity
 
----
+Component	Specification
+Product	PowerChain Checkout™
+Version	1.0 Beta
+Edition	Enterprise Foundation
+Runtime	PowerChain Runtime Core™
+Payments	PowerPay Payment Gateway™
+Blockchain	Solana Enterprise Layer™
+API	REST /api/v1/
+SDK	TypeScript + React
+Documentation	OpenAPI 3.1 + TypeDoc + Storybook
+Deployment	Kubernetes + Terraform
+Status	Beta
+
+⸻
+
+Enterprise Platform Model
+
+flowchart TB
+A[Enterprise Users]
+A --> B[Checkout Experience]
+B --> C[PowerChain SDK]
+C --> D[PowerChain UI™]
+C --> E[PowerPay Gateway™]
+C --> F[Wallet OS™]
+C --> G[Asset Cloud™]
+C --> H[AI Financial Runtime]
+E --> I[Payment Router]
+I --> J[Payment Providers]
+I --> K[Risk Engine]
+I --> L[Settlement Engine]
+F --> M[Solana Enterprise Layer™]
+M --> N[RPC Infrastructure]
+M --> O[Helius Processing]
+M --> P[Anchor Programs]
+M --> Q[SPL Token-2022]
+C --> R[API Gateway]
+R --> S[/api/v1]
+S --> T[Enterprise Services]
+T --> U[Kubernetes Platform]
+U --> V[Cloud Infrastructure]
+
+⸻
+
+SDK Architecture
+
+Repository:
+
+checkout-sdk/
+
+Architecture:
+
+Applications
+↓
+React SDK
+↓
+PowerChain UI™
+↓
+Checkout Engine
+↓
+Payment Services
+↓
+Blockchain Services
+↓
+Infrastructure Layer
+
+⸻
+
+Repository Structure
+
+checkout-sdk/
+├── apps/
+│   ├── checkout-demo
+│   ├── merchant-console
+│   ├── billing-console
+│   ├── treasury-console
+│   ├── investor-console
+│   ├── partner-portal
+│   └── developer-portal
+├── packages/
+│   ├── ui
+│   │   ├── components
+│   │   ├── primitives
+│   │   ├── tokens
+│   │   ├── themes
+│   │   └── accessibility
+│   ├── checkout
+│   │   ├── checkout-ui
+│   │   ├── payment-form
+│   │   ├── cart
+│   │   ├── sessions
+│   │   └── receipts
+│   ├── powerpay
+│   │   ├── gateway
+│   │   ├── router
+│   │   ├── providers
+│   │   ├── refunds
+│   │   └── settlement
+│   ├── wallet-sdk
+│   │   ├── provider
+│   │   ├── wallet-connect
+│   │   ├── solana-login
+│   │   ├── solana-pay
+│   │   ├── send
+│   │   └── receive
+│   ├── billing
+│   │   ├── invoices
+│   │   ├── subscriptions
+│   │   └── customers
+│   ├── auth
+│   │   ├── oauth
+│   │   ├── oidc
+│   │   ├── sessions
+│   │   ├── api-keys
+│   │   └── permissions
+│   ├── plugins
+│   │   ├── registry
+│   │   ├── runtime
+│   │   └── marketplace
+├── blockchain/
+│   ├── solana
+│   ├── anchor
+│   ├── programs
+│   ├── token-2022
+│   ├── helius
+│   ├── pyth
+│   └── indexer
+├── api/
+│   ├── openapi.yaml
+│   ├── routes
+│   ├── middleware
+│   └── webhooks
+├── docs/
+│   ├── architecture
+│   ├── api
+│   ├── sdk
+│   ├── security
+│   └── deployment
+└── infrastructure/
+    ├── docker
+    ├── kubernetes
+    ├── helm
+    ├── terraform
+    └── monitoring
+
+⸻
+
+PowerChain UI™
+
+Package:
+
+@powerchain/ui
+
+Enterprise design system.
+
+Layers:
+
+Design Tokens
+↓
+UI Primitives
+↓
+Business Components
+↓
+Financial Components
+↓
+Enterprise Applications
+
+Components:
+
+EnterpriseShell
+NavigationRail
+CommandPalette
+BalanceCard
+TransactionTable
+PaymentTimeline
+SettlementPanel
+RiskDashboard
+AuditTimeline
+
+⸻
+
+Smart Checkout Engine™
+
+Package:
+
+@powerchain/checkout
+
+Checkout lifecycle:
+
+Create Session
+↓
+Customer Identity
+↓
+Cart Validation
+↓
+Pricing
+↓
+Payment Selection
+↓
+Risk Assessment
+↓
+Authorization
+↓
+Settlement
+↓
+Receipt
+
+Example:
+
+<PowerCheckout
+tenant="enterprise"
+network="mainnet"
+payment="powerpay"
+wallet="solana"
+theme="dark-green"
+/>
+
+⸻
+
+PowerPay Payment Gateway™
+
+Package:
+
+@powerchain/powerpay
+
+Architecture:
+
+Payment Request
+↓
+Gateway API
+↓
+Risk Engine
+↓
+Payment Router
+↓
+Provider Adapter
+↓
+Settlement
+↓
+Analytics
+
+Capabilities:
+
+* Payment orchestration
+* Provider routing
+* Digital assets
+* Fiat settlement
+* Refunds
+* Transaction recovery
+* Enterprise reporting
+
+⸻
+
+Wallet OS™
+
+Package:
+
+@powerchain/wallet-sdk
+
+Supported:
+
+* Solana
+* EVM networks
+* WalletConnect
+* Embedded wallets
+* Institutional wallets
+
+Components:
+
+WalletProvider
+WalletConnectModal
+SolanaLoginButton
+SolanaPayButton
+BuyButton
+SendButton
+ReceiveButton
+
+⸻
+
+Solana Enterprise Layer™
+
+Packages:
+
+@powerchain/solana
+@powerchain/anchor
+@powerchain/token-2022
+
+Infrastructure:
+
+Application
+↓
+Wallet SDK
+↓
+Solana RPC
+↓
+Anchor Programs
+↓
+Token-2022
+↓
+Indexer
+
+⸻
+
+Helius Event Pipeline
+
+Blockchain Transaction
+↓
+Helius Webhook
+↓
+Event Processor
+↓
+Queue
+↓
+Indexer
+↓
+API
+↓
+Application
+
+⸻
+
+Pyth Market Data Service
+
+Oracle Feed
+↓
+Price Validation
+↓
+Risk Engine
+↓
+Settlement Approval
+↓
+Transaction Execution
+
+⸻
+
+Authentication Platform
+
+Package:
+
+@powerchain/auth
+
+Protocols:
+
+* OAuth 2.1
+* OpenID Connect
+* JWT
+* Passkeys
+* API keys
+* Enterprise SSO
+
+Flow:
+
+User
+↓
+Identity Provider
+↓
+OAuth/OIDC
+↓
+Session Token
+↓
+PowerChain Runtime
+
+⸻
+
+API Gateway
+
+Base:
+
+/api/v1/
+
+Services:
+
+/auth
+/users
+/organizations
+/customers
+/checkout
+/cart
+/orders
+/payments
+/refunds
+/wallets
+/assets
+/tokens
+/billing
+/subscriptions
+/treasury
+/settlement
+/events
+/webhooks
+/analytics
+
+⸻
+
+Rate Limiting & Quota System
+
+Package:
+
+@powerchain/quota
+
+Architecture:
+
+Request
+↓
+API Key Validation
+↓
+User Tier Detection
+↓
+Endpoint Policy
+↓
+Quota Check
+↓
+Service Execution
+
+Example tiers:
+
+Tier	Requests
+Developer	1,000/day
+Business	100,000/day
+Enterprise	Custom
+
+Response:
+
+{
+ "error":"QUOTA_EXCEEDED",
+ "message":"Daily API quota reached",
+ "retry_after":3600
+}
+
+⸻
+
+Documentation Pipeline
+
+TypeScript
+↓
+TypeDoc
+↓
+OpenAPI Generator
+↓
+API Reference
+↓
+Developer Portal
+↓
+Storybook + MDX
+
+⸻
+
+Production Infrastructure
+
+Kubernetes
+
+services/
+├── checkout-api
+├── powerpay-service
+├── wallet-service
+├── blockchain-indexer
+├── billing-service
+├── analytics-service
+
+⸻
+
+Observability
+
+Stack:
+
+OpenTelemetry
+↓
+Prometheus
+↓
+Grafana
+↓
+Loki
+↓
+Tempo
+
+Metrics:
+
+* Checkout latency
+* Payment success
+* Settlement status
+* Wallet activity
+* Blockchain events
+* Security events
+
+⸻
+
+Package Registry
+
+@powerchain/sdk
+@powerchain/ui
+@powerchain/checkout
+@powerchain/powerpay
+@powerchain/wallet-sdk
+@powerchain/billing
+@powerchain/auth
+@powerchain/quota
+@powerchain/plugins
+@powerchain/solana
+@powerchain/token-2022
+@powerchain/analytics
+
+⸻
+
+Release Artifact
+
+powerchain-checkout-sdk-v1.0-beta.zip
+
+Includes:
+
+✓ Enterprise SDK
+✓ Checkout Engine
+✓ PowerPay Gateway™
+✓ Wallet OS™
+✓ Billing Engine
+✓ Authentication
+✓ Rate Limiting
+✓ Plugin Runtime
+✓ Solana Layer
+✓ Token-2022 Support
+✓ Helius Integration
+✓ Pyth Integration
+✓ OpenAPI Documentation
+✓ TypeDoc Portal
+✓ Kubernetes Deployment
+✓ Terraform Infrastructure
+
+⸻
+
+Final Identity
+
+PowerChain Checkout™
+Version:
+1.0 Beta
+Platform:
+PowerChain Platform™
+Payments:
+PowerPay Payment Gateway™
+Blockchain:
+Solana Enterprise Layer™
+API:
+REST /api/v1/
+Documentation:
+OpenAPI 3.1
+TypeDoc
+Storybook
+MDX
+Status:
+Enterprise Beta
+
+⸻
 
 © 2026 PowerChain™
-Enterprise Blockchain Infrastructure
 
-```
-
-This version is structured as a public-facing enterprise repository README suitable for developers, enterprise customers, infrastructure teams, and investors. It also leaves room for future additions such as API documentation, Kubernetes deployment guides, SDK documentation, and compliance sections.
-```
+Enterprise Commerce, Payments & Digital Asset Settlement Infrastructure
