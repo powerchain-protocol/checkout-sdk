@@ -1,133 +1,287 @@
 # PowerChain Checkout™ UI SDK
 
 <p align="center">
-  <img src="./assets/banner/powerchain-checkout-banner.png" alt="PowerChain Checkout UI SDK" width="1200"/>
+  <img src="./assets/banner/powerchain-checkout-banner.png" width="1200" alt="PowerChain Checkout UI SDK">
 </p>
 
 <h1 align="center">PowerChain Checkout™ UI SDK</h1>
 
 <p align="center">
-<strong>Enterprise Foundation Edition</strong><br/>
-<strong>Version 1.0.0-beta.0</strong>
-</p>
 
-<p align="center">
+Enterprise Foundation Edition
 
-**Enterprise Financial Experience Infrastructure**
+Version **1.0.0-beta.0**
 
-Composable React components, payment orchestration, wallet infrastructure, Solana integrations, enterprise UI, and developer tooling for building modern financial applications on the **PowerChain Platform™**.
+Built on **PowerChain Platform™**
 
 </p>
 
 <p align="center">
 
-**Composable • Multi-Tenant • Cloud Native • Solana Ready • AI Ready • Enterprise Secure**
+Composable Financial Experience Infrastructure for modern commerce,
+payments, wallets, digital assets, treasury, settlement,
+and programmable financial applications.
 
 </p>
+
+---
 
 <p align="center">
 
 ![Version](https://img.shields.io/badge/version-1.0.0--beta.0-0F5A3D)
-![Status](https://img.shields.io/badge/status-Enterprise%20Foundation-blue)
-![React](https://img.shields.io/badge/React-19-61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6)
-![License](https://img.shields.io/badge/license-Apache%202.0-green)
-![Platform](https://img.shields.io/badge/platform-PowerChain-darkgreen)
+![Status](https://img.shields.io/badge/status-beta-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
+![React](https://img.shields.io/badge/React-19-61dafb)
+![License](https://img.shields.io/badge/license-Apache--2.0-success)
+![OpenAPI](https://img.shields.io/badge/OpenAPI-3.1-orange)
+![Storybook](https://img.shields.io/badge/Storybook-8-ff4785)
 ![Solana](https://img.shields.io/badge/Solana-Enterprise-purple)
 
 </p>
 
 ---
 
-# Enterprise Financial Experience Infrastructure
+# Overview
 
-PowerChain Checkout™ UI SDK is an enterprise-grade platform for building modern financial applications.
+PowerChain Checkout™ UI SDK is an enterprise-grade platform for building
+modern financial experiences.
 
-Instead of providing only reusable UI components, the SDK delivers a complete financial application framework including:
+Instead of providing only checkout components, the SDK delivers an
+entire financial application framework including:
 
-* Smart Checkout™
-* PowerPay™ Payment Gateway
-* Wallet OS™
-* Enterprise UI Framework
-* Solana Enterprise Layer™
-* Runtime Configuration
-* Plugin Framework
-* AI Financial Runtime
-* OpenAPI-first APIs
-* Enterprise Deployment Platform
+- Smart Checkout™
+- PowerPay Payment Gateway™
+- Wallet OS™
+- Asset Cloud™
+- Runtime Core™
+- Enterprise UI Framework
+- Plugin Platform
+- Solana Enterprise Layer™
+- Multi-tenant Runtime
+- AI Financial Runtime
 
-The platform enables organisations to rapidly build secure, scalable and composable financial applications for commerce, digital assets, treasury operations and energy markets.
+The SDK is designed for organisations building:
+
+- Commerce Platforms
+- SaaS Billing
+- Enterprise Payments
+- Digital Asset Applications
+- Carbon Credit Platforms
+- Energy Trading
+- Treasury Systems
+- Capital Market Applications
 
 ---
 
-# Platform Vision
+# Platform Architecture
+
+```text
+                     Enterprise Applications
+                               │
+                PowerChain Developer Platform
+                               │
+ ┌──────────────────────────────────────────────┐
+ │          Experience Platform                 │
+ │                                              │
+ │  PowerChain UI™                              │
+ │  Checkout Framework                          │
+ │  Dashboard System                            │
+ │  Mobile Runtime                              │
+ └──────────────────────────────────────────────┘
+                               │
+ ┌──────────────────────────────────────────────┐
+ │          Financial Platform                  │
+ │                                              │
+ │  PowerPay™                                  │
+ │  Billing                                    │
+ │  Wallet OS™                                 │
+ │  Treasury                                   │
+ │  Settlement                                 │
+ └──────────────────────────────────────────────┘
+                               │
+ ┌──────────────────────────────────────────────┐
+ │            Trust Platform                    │
+ │                                              │
+ │ Identity                                     │
+ │ OAuth                                        │
+ │ Security                                     │
+ │ Compliance                                   │
+ │ Audit                                        │
+ └──────────────────────────────────────────────┘
+                               │
+ ┌──────────────────────────────────────────────┐
+ │        Solana Enterprise Layer™              │
+ │                                              │
+ │ Wallet SDK                                   │
+ │ Anchor                                       │
+ │ Token-2022                                   │
+ │ Helius                                       │
+ │ Pyth                                         │
+ └──────────────────────────────────────────────┘
+                               │
+ Kubernetes • Docker • Helm • Terraform
+```
+
+---
+
+# Core Principles
+
+PowerChain follows six engineering principles.
+
+## Enterprise First
+
+Built for production workloads.
+
+- Multi-tenant
+- Secure by default
+- Cloud native
+- Observable
+- Extensible
+
+---
+
+## Composable
+
+Every capability is published as an independent package.
 
 ```
-Commerce
-      │
-      ▼
-Checkout
-      │
-      ▼
-Payments
-      │
-      ▼
-Wallet Infrastructure
-      │
-      ▼
-Digital Assets
-      │
-      ▼
-Treasury
-      │
-      ▼
-Settlement
-      │
-      ▼
+Application
+
+↓
+
+SDK
+
+↓
+
+Domain Packages
+
+↓
+
+Runtime
+
+↓
+
+Infrastructure
+```
+
+---
+
+## Runtime Profiles
+
+The same application runs in every environment.
+
+```
+Mock
+
+↓
+
+Demo
+
+↓
+
+Sandbox
+
+↓
+
+Production
+```
+
+Switching environments requires configuration only.
+
+No application code changes.
+
+---
+
+## API First
+
+Everything is exposed through stable REST APIs.
+
+```
+/api/v1/
+```
+
+Generated from
+
+```
+TypeScript
+
+↓
+
+OpenAPI
+
+↓
+
+SDKs
+
+↓
+
+Documentation
+```
+
+---
+
+## Plugin Driven
+
+Payment providers
+
+Wallets
+
+Identity
+
 Analytics
-      │
-      ▼
-AI Financial Automation
-```
+
+Checkout
+
+Billing
+
+are all extensible through plugins.
 
 ---
 
-# Core Capabilities
+## Developer Experience
 
-## Enterprise UI
+Designed for enterprise engineering teams.
 
-* Enterprise Design System
-* PowerChain UI™
-* Responsive layouts
-* Accessibility-first
-* Dark & Light themes
-* Runtime theme switching
-
----
-
-## Checkout Platform
-
-* Multi-step checkout
-* Checkout sessions
-* Cart management
-* Tax calculation
-* Discount engine
-* Receipts
-* Payment plugins
-* Order lifecycle
+- TypeScript
+- React
+- Storybook
+- Vitest
+- Playwright
+- MSW
+- OpenAPI
+- TypeDoc
+- Turborepo
 
 ---
 
-## PowerPay™ Gateway
+# Features
 
-* Payment routing
-* Multiple providers
-* Smart retries
-* Payment recovery
-* Refund workflows
-* Settlement engine
-* Transaction lifecycle
-* Financial reporting
+## Smart Checkout™
+
+- Multi-step checkout
+- Checkout Sessions
+- Cart Management
+- Coupons
+- Taxes
+- Shipping
+- Receipts
+- Analytics
+
+---
+
+## PowerPay™
+
+Enterprise payment orchestration.
+
+Supports
+
+- Card Payments
+- Wallets
+- Bank Transfers
+- Solana Pay
+- Digital Assets
+- Settlement
+- Refunds
 
 ---
 
@@ -135,340 +289,327 @@ AI Financial Automation
 
 Supports
 
-* Solana Wallet Adapter
-* WalletConnect
-* Embedded Wallets
-* Enterprise custody
-* Custodial wallets
-* Non-custodial wallets
-* Multi-wallet support
+- Solana Wallet Adapter
+- WalletConnect
+- Embedded Wallets
+- Institutional Custody
+- Multi-wallet
+- Permissions
 
 ---
 
 ## Solana Enterprise Layer™
 
-Integrated technologies
+Includes
 
-* Solana
-* Anchor
-* SPL Token-2022
-* Solana Pay
-* Helius
-* Pyth
-* Address Lookup Tables
-* Versioned Transactions
+- SPL Token-2022
+- Anchor
+- Helius
+- Pyth
+- Solana Pay
+- Program Templates
 
 ---
 
-## AI Runtime
+## Runtime Core™
 
-AI powered services
+Provides
 
-* Checkout Agent
-* Payment Agent
-* Treasury Agent
-* Risk Agent
-* Fraud Agent
-* Compliance Agent
-* Analytics Agent
-
----
-
-# Enterprise Architecture
-
-```text
-                    Enterprise Applications
-                              │
-                PowerChain Developer Platform
-                              │
- ┌────────────────────────────────────────────────────┐
- │             Experience Platform                    │
- │                                                    │
- │ PowerChain UI™                                     │
- │ Smart Checkout™                                    │
- │ Merchant Dashboard                                 │
- │ Mobile SDK                                         │
- └────────────────────────────────────────────────────┘
-                              │
- ┌────────────────────────────────────────────────────┐
- │             Financial Platform                     │
- │                                                    │
- │ PowerPay™ Gateway                                 │
- │ Billing Engine                                     │
- │ Customer Runtime                                   │
- │ Treasury                                            │
- │ Settlement                                          │
- └────────────────────────────────────────────────────┘
-                              │
- ┌────────────────────────────────────────────────────┐
- │               Trust Platform                       │
- │                                                    │
- │ Authentication                                     │
- │ Identity                                           │
- │ Compliance                                         │
- │ Security                                           │
- │ Audit                                               │
- └────────────────────────────────────────────────────┘
-                              │
- ┌────────────────────────────────────────────────────┐
- │            Solana Enterprise Layer™                │
- │                                                    │
- │ Wallet SDK                                         │
- │ Anchor Programs                                    │
- │ Token-2022                                         │
- │ Helius                                              │
- │ Pyth                                                │
- └────────────────────────────────────────────────────┘
-                              │
- Kubernetes • Helm • Terraform • OpenTelemetry
-```
-
----
-
-# Runtime Profiles
-
-PowerChain Runtime supports four execution environments.
-
-| Runtime    | Purpose             | API         |
-| ---------- | ------------------- | ----------- |
-| Mock       | Local development   | `/demo/v1/` |
-| Demo       | Interactive demos   | `/demo/v1/` |
-| Sandbox    | Integration testing | `/api/v1/`  |
-| Production | Live systems        | `/api/v1/`  |
-
-Changing runtime requires configuration only.
-
-No application code changes.
-
----
-
-# Mock vs Production
-
-```
-Mock UI
-      │
-      ▼
-Demo Services
-      │
-      ▼
-/demo/v1/
-```
-
-```
-Production UI
-      │
-      ▼
-Enterprise Services
-      │
-      ▼
-/api/v1/
-```
-
-The SDK completely separates demo data from production infrastructure.
-
-```
-src/
-
-demo/
-    api/
-    fixtures/
-    payments/
-    wallets/
-    customers/
-    orders/
-
-services/
-    api/
-    checkout/
-    payments/
-    wallets/
-    auth/
-```
+- Configuration
+- Service Discovery
+- Feature Flags
+- Tenant Context
+- Health Monitoring
+- Event Bus
 
 ---
 
 # Repository Structure
 
-```text
+```
 powerchain-checkout-sdk/
 
 apps/
-    checkout-demo
-    merchant-console
-    treasury-console
-    developer-portal
-
 packages/
-
-    ui/
-    checkout/
-    payments/
-    wallets/
-    billing/
-    auth/
-    plugins/
-    runtime/
-    analytics/
-
 docs/
+
+checkout/
+payments/
+wallets/
+billing/
+plugins/
+runtime/
+platform/
+identity/
+blockchain/
 
 examples/
 
-scripts/
+demo/
+
+mock/
 
 infrastructure/
 
-assets/
+docker/
+kubernetes/
+helm/
+terraform/
+
+storybook/
+
+tests/
 ```
 
 ---
 
 # Package Ecosystem
 
-```text
+```
 @powerchain/sdk
-
-@powerchain/runtime
 
 @powerchain/ui
 
-@powerchain/tokens
+@powerchain/runtime
 
 @powerchain/checkout
 
-@powerchain/cart
-
 @powerchain/powerpay
 
-@powerchain/payments
+@powerchain/wallets
 
 @powerchain/billing
 
-@powerchain/customers
+@powerchain/cart
 
-@powerchain/wallets
+@powerchain/plugins
+
+@powerchain/auth
+
+@powerchain/quota
 
 @powerchain/solana
 
 @powerchain/token-2022
 
 @powerchain/anchor
-
-@powerchain/auth
-
-@powerchain/plugins
-
-@powerchain/analytics
-
-@powerchain/workflows
-
-@powerchain/mobile
-
-@powerchain/cli
-
-@powerchain/partner-sdk
 ```
 
 ---
 
-# Installation
+# Runtime Profiles
 
-```bash
-pnpm install
+## Mock
+
+Local UI development.
+
+No backend required.
+
+```
+/demo/mock
+```
+
+Uses
+
+- mock payments
+- mock checkout
+- fake wallets
+- fake receipts
+
+---
+
+## Demo
+
+Demonstration APIs.
+
+```
+/demo/api/v1/
 ```
 
 ---
 
-# Development
+## Sandbox
 
-```bash
-pnpm dev
+Integration environment.
+
+```
+/sandbox/api/v1/
 ```
 
 ---
 
-# Build
+## Production
 
-```bash
-pnpm build
+Enterprise deployment.
+
+```
+/api/v1/
 ```
 
 ---
 
-# Testing
+# API
 
-```bash
-pnpm test
+```
+/api/v1
 
-pnpm test:e2e
+/auth
 
-pnpm test:ui
+/users
 
-pnpm test:visual
+/customers
+
+/cart
+
+/orders
+
+/checkout
+
+/payments
+
+/refunds
+
+/wallets
+
+/assets
+
+/subscriptions
+
+/billing
+
+/treasury
+
+/analytics
+
+/webhooks
 ```
 
 ---
 
-# Environment Configuration
+# Checkout Flow
 
-```env
-POWERCHAIN_RUNTIME=mock
-
-POWERCHAIN_ENV=development
-
-POWERCHAIN_API_BASE=/demo/v1/
-
-POWERCHAIN_VERSION=1.0.0-beta.0
-
-POWERCHAIN_REGION=eu-west
-
-POWERCHAIN_NETWORK=devnet
-
-POWERCHAIN_ENABLE_AI=true
-
-POWERCHAIN_ENABLE_WALLETS=true
-
-POWERCHAIN_ENABLE_PAYMENTS=true
-
-POWERCHAIN_ENABLE_ANALYTICS=true
-
-SOLANA_RPC_URL=
-
-HELIUS_API_KEY=
-
-PYTH_ENDPOINT=
 ```
+Customer
 
-Production
+↓
 
-```env
-POWERCHAIN_RUNTIME=production
+Cart
 
-POWERCHAIN_API_BASE=/api/v1/
+↓
+
+Checkout Session
+
+↓
+
+Identity
+
+↓
+
+Payment
+
+↓
+
+Wallet
+
+↓
+
+Settlement
+
+↓
+
+Receipt
+
+↓
+
+Analytics
 ```
 
 ---
 
-# Quick Example
+# Payment Flow
 
-```tsx
-import { PowerCheckout } from "@powerchain/checkout";
+```
+Payment Request
 
-export default function App() {
-  return (
-    <PowerCheckout
-      runtime="mock"
-      apiBase="/demo/v1/"
-      theme="powerchain"
-      modules={[
-        "checkout",
-        "payments",
-        "wallets",
-        "analytics"
-      ]}
-    />
-  );
-}
+↓
+
+Validation
+
+↓
+
+Risk
+
+↓
+
+Provider Selection
+
+↓
+
+Authorization
+
+↓
+
+Settlement
+
+↓
+
+Receipt
+```
+
+---
+
+# Wallet Flow
+
+```
+Wallet
+
+↓
+
+Authentication
+
+↓
+
+Signing
+
+↓
+
+Transaction
+
+↓
+
+Confirmation
+```
+
+---
+
+# Plugin Lifecycle
+
+```
+Create
+
+↓
+
+Validate
+
+↓
+
+Sign
+
+↓
+
+Publish
+
+↓
+
+Install
+
+↓
+
+Runtime
+
+↓
+
+Monitor
 ```
 
 ---
@@ -478,107 +619,70 @@ export default function App() {
 ```
 docs/
 
-Getting Started
+getting-started/
 
-Architecture
+architecture/
 
-Runtime
+runtime/
 
-Configuration
+configuration/
 
-PowerChain UI™
+checkout/
 
-Checkout
+payments/
 
-Payments
+wallets/
 
-Billing
+billing/
 
-Wallets
+identity/
 
-Solana
+security/
 
-Authentication
+plugins/
 
-Plugins
+sdk/
 
-SDK Guides
+api/
 
-Examples
+deployment/
 
-API
+operations/
 
-Deployment
+governance/
+```
 
-Operations
+---
+
+# Testing
+
+```
+Unit
+
+Integration
+
+E2E
+
+Visual
+
+Accessibility
+
+Performance
 
 Security
-
-Governance
-
-Release Notes
 ```
 
----
+Run
 
-# Documentation Pipeline
+```bash
+pnpm test
 
+pnpm test:e2e
+
+pnpm test:visual
+
+pnpm test:security
 ```
-TypeScript
-
-      │
-
-      ▼
-
-TypeDoc
-
-      │
-
-      ▼
-
-OpenAPI 3.1
-
-      │
-
-      ▼
-
-SDK Generator
-
-      │
-
-      ▼
-
-Storybook
-
-      │
-
-      ▼
-
-MDX Documentation
-
-      │
-
-      ▼
-
-Developer Portal
-```
-
----
-
-# Deployment
-
-Supported platforms
-
-* Docker
-* Docker Compose
-* Kubernetes
-* Helm
-* Terraform
-* GitHub Actions
-* Azure DevOps
-* AWS
-* Google Cloud
-* Microsoft Azure
 
 ---
 
@@ -586,64 +690,87 @@ Supported platforms
 
 Built-in support for
 
-* OpenTelemetry
-* Prometheus
-* Grafana
-* Loki
-* Tempo
+- OpenTelemetry
+- Prometheus
+- Grafana
+- Loki
+- Tempo
 
-Monitored metrics include
+Tracks
 
-* Payment success rate
-* Checkout conversion
-* API latency
-* Wallet activity
-* Solana transactions
-* Settlement duration
-* Infrastructure health
-* Audit events
-
----
-
-# Security
-
-Enterprise security features include
-
-* OAuth 2.0
-* OpenID Connect
-* Enterprise SSO
-* JWT Authentication
-* API Keys
-* RBAC
-* Permission Engine
-* Audit Logging
-* Encryption at Rest
-* TLS 1.3
-* Rate Limiting
-* Quota Management
+- API latency
+- Checkout performance
+- Payment success
+- Wallet activity
+- Solana transactions
+- Runtime health
+- Audit events
 
 ---
 
-# Developer Experience
+# Deployment
 
-Included with the SDK
+Supported
 
-* React 19
-* TypeScript 5
-* Storybook
-* TypeDoc
-* OpenAPI 3.1
-* Vitest
-* Playwright
-* ESLint
-* Prettier
-* Husky
-* Changesets
-* Mock Service Worker (MSW)
-* Turborepo
-* GitHub Actions
-* Interactive examples
-* CLI generators
+- Docker
+- Kubernetes
+- Helm
+- Terraform
+
+```
+pnpm build
+
+docker build .
+
+helm install
+
+terraform apply
+```
+
+---
+
+# Enterprise Security
+
+Supports
+
+- OAuth 2.0
+- OpenID Connect
+- JWT
+- RBAC
+- API Keys
+- Enterprise SSO
+- Audit Logging
+- Rate Limiting
+
+---
+
+# Documentation Generation
+
+Automatically generated
+
+```
+TypeScript
+
+↓
+
+TypeDoc
+
+↓
+
+OpenAPI
+
+↓
+
+SDK Generator
+
+↓
+
+Storybook
+
+↓
+
+Developer Portal
+```
 
 ---
 
@@ -653,65 +780,65 @@ Included with the SDK
 
 Enterprise Foundation
 
-* ✅ Platform architecture
-* ✅ Runtime framework
-* ✅ PowerChain UI™
-* ✅ Smart Checkout™
-* ✅ PowerPay™
-* ✅ Wallet OS™
-* ✅ Solana integration
-* ✅ Plugin framework
-* ✅ Documentation platform
+- Runtime Core
+- Checkout SDK
+- UI Framework
+- PowerPay
+- Wallet OS
+- Plugin Runtime
+- Solana Layer
+- Documentation
+
+---
 
 ## v1.0.0-beta.1
 
 Developer Preview
 
-* Complete Storybook catalogue
-* OpenAPI explorer
-* Generated SDK clients
-* Partner SDK templates
-* Interactive documentation
-* Mobile SDK
-* Production examples
+- API Explorer
+- Generated SDKs
+- Partner Portal
+- Marketplace
+- Enterprise Templates
+- Security Handbook
+
+---
 
 ## v1.0.0-beta.2
 
 Enterprise Integration
 
-* Enterprise deployment packages
-* Marketplace plugins
-* Partner certification
-* Production runbooks
-* Operations handbook
-* Security documentation
-* Enterprise analytics
+- Production Packages
+- Certification
+- Marketplace
+- Enterprise Operations
+- Multi-region Runtime
 
 ---
 
 # Contributing
 
-Contributions are welcome.
+See
 
-Please read:
-
-* `CONTRIBUTING.md`
-* `CODE_OF_CONDUCT.md`
-* `GOVERNANCE.md`
-* `SECURITY.md`
-
-before submitting pull requests.
+- CONTRIBUTING.md
+- GOVERNANCE.md
+- SECURITY.md
+- CODE_OF_CONDUCT.md
 
 ---
 
 # License
 
-Licensed under the **Apache License 2.0**.
+Apache-2.0
 
 ---
 
-# Enterprise Foundation
+<p align="center">
 
-**PowerChain Checkout™ UI SDK** is the enterprise financial experience layer of the **PowerChain Platform™**, providing a composable foundation for programmable commerce, payments, wallets, digital assets, treasury operations, and Solana-native financial infrastructure.
+Built by PowerChain™
 
-Built for modern React applications, the platform combines an enterprise design system, payment orchestration, blockchain integrations, AI-ready workflows, and cloud-native deployment capabilities into a unified SDK that scales seamlessly from local mock development (`/demo/v1/`) to production deployments (`/api/v1/`) without requiring application code changes.
+Enterprise Financial Experience Infrastructure
+
+Version **1.0.0-beta.0**
+
+</p>
