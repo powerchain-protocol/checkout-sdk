@@ -234,7 +234,7 @@ pnpm add @powerchain/wallets@beta
 Clone:
 
 ```bash
-git clone https://github.com/powerchain/powerchain-platform-sdk.git
+git clone https://github.com/powerchain/checkout-sdk.git
 ```
 
 Install:
