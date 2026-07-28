@@ -1,5 +1,3 @@
-# PowerChain Checkout™
-
 <p align="center">
   <img src="./assets/logo/powerchain-logo.png" width="220" alt="PowerChain">
 </p>
