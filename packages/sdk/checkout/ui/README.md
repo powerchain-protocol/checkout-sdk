@@ -1,3 +1,0 @@
-# PowerChain Checkout™ SDK
-
-• src
