@@ -149,9 +149,9 @@ Real-time pricing:
 
 ## Checkout Experience
 
-| Checkout | Investor Workspace |
+| Checkout Plugin | Investor Workspace |
 |-----------|-------------------|
-| ![](assets/architecture/checkout-dashboard.png) | ![](assets/architecture/checkout-dashboard.png) |
+| ![](assets/architecture/checkout-plugin.png) | ![](assets/architecture/checkout-dashboard.png) |
 
 
 ## Invoice & Architecture
