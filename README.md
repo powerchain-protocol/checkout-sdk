@@ -553,7 +553,7 @@ PowerChain Checkout™ follows the PowerChain Design System.
 - Responsive 12-column grid
 - Premium glassmorphism
 - Official white PowerChain logo
-- Metallic PWRC coin
+- Metallic / onyx PWRC coin
 - WCAG 2.2 accessibility compliant
 
 ---
@@ -562,7 +562,7 @@ PowerChain Checkout™ follows the PowerChain Design System.
 
 - PowerChain Capital Markets™
 - PowerChain Wallet™
-- PowerChain Payments™
+- PowerChain Payments™ eg. PowerPay
 - PowerChain Treasury™
 - PowerChain Marketplace™
 - PowerChain Investor Workspace™
@@ -579,3 +579,8 @@ PowerChain Checkout™ follows the PowerChain Design System.
 PowerChain Checkout™ provides the transaction layer for the PowerChain Enterprise Platform™, enabling secure digital commerce, institutional payments, programmable asset settlement and enterprise treasury operations through a unified, cloud-native architecture.
 
 By integrating commerce, identity, compliance, embedded wallets, pricing, treasury and deterministic blockchain execution, PowerChain Checkout™ delivers enterprise-grade infrastructure for the next generation of digital capital markets and programmable financial ecosystems.
+
+# ToDo / idea
+
+• Build e-commerce plugin, payment gateway
+• PWA
