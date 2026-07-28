@@ -140,7 +140,7 @@ Real-time pricing:
 
 # Product Screens
 
-# Dasboard UI/UX Experience
+## Dasboard UI/UX Experience
 
 | User Dashboard | Investor Workspace |
 |-----------|-------------------|
