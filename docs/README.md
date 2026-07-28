@@ -1,11 +1,11 @@
 # PowerChain Checkout - Technical Documentation
 Version 1.0 Beta
 
-### Enterprise Commerce, Payment Orchestration & Programmable Settlement Platform
+**Enterprise Commerce, Payment Orchestration & Programmable Settlement Platform**
 
 ---
 
-## Documentation Index
+# Documentation Index
 
 ```text
 docs/
