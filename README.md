@@ -45,12 +45,12 @@ flowchart TD
 
     A --> B[PowerChain Checkout SDK]
 
-    B --> C[PowerChain UI™]
-    B --> D[Checkout Experience Engine™]
-    B --> E[PowerPay Payment Gateway™]
-    B --> F[Wallet OS™]
-    B --> G[Asset Cloud™]
-    B --> H[PowerChain Intelligence™]
+    B --> C[PowerChain UI]
+    B --> D[Checkout Experience Engine]
+    B --> E[PowerPay Payment Gateway]
+    B --> F[Wallet OS]
+    B --> G[Asset Cloud]
+    B --> H[PowerChain Intelligence]
 
 
     E --> I[Payment Router]
@@ -59,16 +59,16 @@ flowchart TD
     I --> L[Settlement Engine]
 
 
-    F --> M[Solana Enterprise Layer™]
+    F --> M[Solana Enterprise Layer]
 
-    M --> N[Solana RPC + Helius]
+    M --> N[Solana RPC and Helius]
     M --> O[Anchor Programs]
     M --> P[SPL Token-2022]
 
 
     B --> Q[API Gateway]
 
-    Q --> R[/api/v1 API Layer]
+    Q --> R["API v1 Layer"]
 
     R --> S[Enterprise Services]
 
@@ -76,7 +76,8 @@ flowchart TD
 
     T --> U[Cloud Infrastructure]
 
-    U --> V[Monitoring & Observability]
+    U --> V[Monitoring and Observability]
+
 ```
 
 # Platform Architecture
