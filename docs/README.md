@@ -704,11 +704,11 @@ Enterprise Cloud Native
 
 Network:
 
-PowerChain Network™
+Solana / PowerChain Network™ (TBA)
 
 Runtime:
 
-PowerChain Virtual Machine™
+PowerChain Virtual Machine™ / Solana (SVM)
 ```
 
 ---
