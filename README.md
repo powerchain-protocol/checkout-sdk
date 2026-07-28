@@ -163,7 +163,7 @@ Real-time pricing:
 
 ---
 
-# Enterprise Architecture
+# Enterprise Architecture (Core Platform Integration)
 
 <p align="center">
 
