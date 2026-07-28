@@ -140,6 +140,13 @@ Real-time pricing:
 
 # Product Screens
 
+# Dasboard UI/UX Experience
+
+| User Dashboard | Investor Workspace |
+|-----------|-------------------|
+| ![](assets/screenshots/checkout.png) | ![](assets/screenshots/investor-dashboard.png) |
+
+
 ## Checkout Experience
 
 | Checkout | Investor Workspace |
