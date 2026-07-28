@@ -54,7 +54,7 @@ PowerChain Checkout combines:
 Powered by:
 
 - PowerChain Network™
-- PowerChain Virtual Machine™ (PVM)
+- PowerChain Virtual Machine™ (PVM) - TBA
 - PWRC Digital Asset Infrastructure
 
 ---
