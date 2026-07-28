@@ -2,495 +2,1186 @@
 
 <p align="center">
 
-<img src="../../docs/assets/powerchain-logo.svg" width="140" alt="PowerChain"/>
-
-## Enterprise Commerce Design Platform™
-
-**Version 1.0.0 Beta**
-
-Enterprise UI infrastructure for modern commerce, payments, digital assets, treasury and digital capital markets.
-
-Built for **PowerChain Checkout™**
-
-Powered by **PowerChain Network™**
+<img src="./assets/branding/powerchain-checkout-sdk-banner.png"
+width="1200"
+alt="PowerChain Checkout UI SDK">
 
 </p>
 
----
 
-## Overview
+<h1 align="center">
 
-The **PowerChain Checkout™ UI SDK** is an enterprise-grade React and TypeScript component framework that enables developers to build secure, accessible and highly customisable payment experiences.
+PowerChain Checkout™ UI SDK
 
-The SDK provides production-ready interfaces for every stage of the transaction lifecycle, from customer checkout and payment authorisation to wallet interactions, digital asset management, settlement monitoring and enterprise dashboards.
+</h1>
 
-Rather than being limited to payment forms, the UI SDK serves as the presentation layer for the entire PowerChain Checkout™ platform, delivering a consistent user experience across commerce, treasury, tokenisation and digital capital markets.
 
----
+<p align="center">
 
-# Features
+Enterprise Financial Experience Infrastructure
 
-## Commerce
+</p>
 
-- Hosted Checkout
-- Embedded Checkout
-- Headless Checkout
-- Express Checkout
-- One-Click Checkout
-- Payment Links
-- QR Checkout
-- Subscription Billing
-- Invoice Checkout
-- Marketplace Checkout
 
----
+<p align="center">
 
-## Payments
+Programmable Commerce • Payments • Digital Assets • Energy • Treasury • AI Finance
 
-Supports both traditional and digital payment methods.
+</p>
 
-### Traditional Payments
 
-- Credit & Debit Cards
-- Apple Pay
-- Google Pay
-- Open Banking
-- SEPA
-- ACH
-- SWIFT
-- Bank Transfer
+<p align="center">
 
-### Digital Assets
+<strong>PowerChain Platform™</strong>
 
-- PWRC
-- SOL
-- SUI
-- USDC
-- USDT
-- EURC
+<br>
+
+Version 1.0.0-beta.0
+
+<br>
+
+Enterprise Foundation Release
+
+</p>
+
 
 ---
 
-## Wallet Experience
+# Overview
 
-Enterprise wallet abstraction supporting embedded and external wallets.
+PowerChain Checkout™ UI SDK is the enterprise financial experience framework powering programmable financial applications.
 
-### Features
+The SDK provides a unified platform for building:
 
-- Embedded Wallets
-- Wallet Discovery
-- Wallet Connection
-- Wallet Switching
-- Wallet Recovery
-- Transaction Signing
-- Portfolio View
-- Asset Management
+- Enterprise checkout experiences
+- Payment applications
+- Wallet interfaces
+- Digital asset platforms
+- Renewable energy marketplaces
+- Treasury systems
+- Capital market applications
+- AI-powered financial workflows
 
-### Supported Wallets
 
-#### Native
+PowerChain Checkout™ UI SDK combines:
 
-- PowerChain Wallet™
+- PowerChain UI™
+- Runtime infrastructure
+- Authentication services
+- API governance
+- Financial workflow engines
+- Payment infrastructure
+- Digital asset services
+- Enterprise deployment tooling
 
-#### Solana
-
-- Phantom
-- Solflare
-- Backpack
-- Ledger
-- WalletConnect
-
-#### Sui
-
-- Slush
-- Nightly
-- Ledger
 
 ---
 
-## Digital Assets
+# Release Information
 
-Supports enterprise asset interfaces for:
 
-- Stablecoins
-- Utility Tokens
-- SPL Token-2022 Assets
-- Sui Assets
-- Carbon Credit Tokens
-- Renewable Energy Tokens
-- Renewable Energy Certificates
-- Security Tokens
-- Digital Bonds
-- Tokenised Funds
-- Real-World Assets
+| Field | Value |
+|---|---|
+| Product | PowerChain Checkout™ UI SDK |
+| Version | 1.0.0-beta.0 |
+| Platform | PowerChain Platform™ |
+| UI Framework | PowerChain UI™ |
+| Channel | Beta |
+| Status | Enterprise Foundation Baseline |
+| Runtime | Cloud Native |
+
 
 ---
 
-## Enterprise Dashboards
+# Platform Architecture
 
-- Merchant Dashboard
-- Treasury Dashboard
-- Settlement Dashboard
-- Analytics Dashboard
-- Capital Markets Dashboard
 
----
+```
+Enterprise Applications
 
-# Installation
+        |
 
-```bash
-npm install @powerchain/checkout-ui
+PowerChain SDK Layer
+
+        |
+
+PowerChain UI™
+
+        |
+
+Experience Engines
+
+        |
+
+Financial Services
+
+        |
+
+Trust Infrastructure
+
+        |
+
+Cloud Infrastructure
+
 ```
 
----
-
-# Requirements
-
-| Package | Version |
-|----------|----------|
-| Node.js | >=22 |
-| React | >=19 |
-| TypeScript | >=5.8 |
-| Next.js | >=16 |
-
----
-
-# Quick Start
-
-## Provider
-
-```tsx
-import {
-    CheckoutProvider
-} from "@powerchain/checkout-ui";
-
-export default function App() {
-
-    return (
-
-        <CheckoutProvider
-            environment="production"
-            theme="powerchain"
-        >
-
-            <Application />
-
-        </CheckoutProvider>
-
-    );
-
-}
-```
-
----
-
-## Embedded Checkout
-
-```tsx
-import {
-    Checkout
-} from "@powerchain/checkout-ui";
-
-export default function PaymentPage() {
-
-    return (
-
-        <Checkout
-            sessionId="chk_live_xxxxxxxxx"
-        />
-
-    );
-
-}
-```
-
----
-
-## Headless Checkout
-
-```tsx
-import {
-    useCheckout
-} from "@powerchain/checkout-ui";
-
-export default function CheckoutPage() {
-
-    const {
-
-        createCheckout,
-        confirmPayment,
-        loading
-
-    } = useCheckout();
-
-    return (
-
-        <button
-            disabled={loading}
-            onClick={confirmPayment}
-        >
-
-            Complete Payment
-
-        </button>
-
-    );
-
-}
-```
 
 ---
 
 # Repository Structure
 
-```text
-packages/sdk/checkout/ui/
 
-├── src/
+```
+powerchain-platform-sdk/
+
+
+├── apps/
+
 │
-├── design-system/
-├── themes/
-├── layouts/
-├── providers/
-├── hooks/
-├── commerce/
+├── checkout-demo
+
+├── merchant-console
+
+├── treasury-console
+
+├── investor-portal
+
+├── energy-marketplace
+
+├── partner-portal
+
+└── developer-portal
+
+
+├── packages/
+
+
+├── ui/
+
+│
+├── components
+
+├── primitives
+
+├── tokens
+
+├── themes
+
+├── charts
+
+└── accessibility
+
+
 ├── checkout/
-├── payments/
-├── wallets/
-├── assets/
-├── settlement/
-├── treasury/
-├── tokenisation/
-├── capital-markets/
-├── compliance/
-├── dashboard/
-├── analytics/
-├── charts/
-├── localisation/
-├── accessibility/
-├── enterprise/
-├── security/
-├── utilities/
-├── types/
-├── icons/
-├── stories/
-├── examples/
-├── tests/
-└── index.ts
+
+│
+├── checkout-ui
+
+├── checkout-engine
+
+├── sessions
+
+├── workflows
+
+└── receipts
+
+
+├── finance/
+
+│
+├── payments
+
+├── wallets
+
+├── assets
+
+├── treasury
+
+└── settlement
+
+
+├── platform/
+
+│
+├── runtime
+
+├── configuration
+
+├── auth
+
+├── permissions
+
+├── compliance
+
+└── security
+
+
+├── intelligence/
+
+│
+├── agents
+
+├── analytics
+
+├── automation
+
+└── forecasting
+
+
+├── developer/
+
+│
+├── cli
+
+├── generators
+
+├── migrations
+
+├── docs
+
+└── partner-sdk
+
+
+└── infrastructure/
+
+    ├── docker
+
+    ├── kubernetes
+
+    ├── helm
+
+    ├── terraform
+
+    └── observability
+
 ```
 
 ---
 
-# Enterprise Architecture
+# PowerChain UI™
 
-```text
+Package:
+
+```
+@powerchain/ui
+```
+
+Enterprise component system powering all PowerChain applications.
+
+
+Architecture:
+
+```
+Design Tokens
+
+↓
+
+Primitives
+
+↓
+
+Components
+
+↓
+
+Financial Patterns
+
+↓
+
+Applications
+
+```
+
+
+---
+
+# Component Platform
+
+
+## Core Components
+
+- Button
+- Input
+- Select
+- Modal
+- Drawer
+- Table
+- Form
+- Navigation
+
+
+## Financial Components
+
+- BalanceCard
+- MoneyDisplay
+- TransactionTable
+- PaymentStatus
+- PortfolioChart
+- LiquidityWidget
+- SettlementSummary
+
+
+## Enterprise Components
+
+- EnterpriseShell
+- WorkspaceSwitcher
+- CommandPalette
+- ApprovalWorkflow
+- AuditTimeline
+- CompliancePanel
+- ReportingDashboard
+
+
+---
+
+# Token Platform™
+
+Package:
+
+```
+@powerchain/tokens
+```
+
+
+Capabilities:
+
+- Runtime themes
+- White-label branding
+- Tenant themes
+- Accessibility modes
+- CSS variable generation
+- React Native token output
+
+
+Example:
+
+```typescript
+const theme = {
+
+brand:"powerchain",
+
+mode:"enterprise",
+
+accessibility:"standard"
+
+};
+```
+
+
+---
+
+# Smart Checkout™
+
+Package:
+
+```
+@powerchain/checkout
+```
+
+
+Architecture:
+
+```
+Customer
+
+↓
+
+Identity
+
+↓
+
+Commerce
+
+↓
+
+Pricing
+
+↓
+
+Payment
+
+↓
+
+Wallet
+
+↓
+
+Settlement
+
+↓
+
+Receipt
+
+↓
+
+Analytics
+
+```
+
+
+Example:
+
+```tsx
+<PowerCheckout
+
+tenant="enterprise"
+
+theme="powerchain"
+
+modules={[
+"commerce",
+"payment",
+"wallet",
+"settlement"
+]}
+
+/>
+```
+
+
+---
+
+# Authentication Platform™
+
+Package:
+
+```
+@powerchain/auth
+```
+
+
+Enterprise identity infrastructure.
+
+
+Supports:
+
+- OAuth 2.0
+- OpenID Connect
+- PKCE
+- Enterprise SSO
+- SAML
+- MFA
+- Wallet authentication
+
+
+Architecture:
+
+```
+User
+
+↓
+
+Identity Provider
+
+↓
+
+OAuth / OIDC
+
+↓
+
+PowerChain Identity
+
+↓
+
+Session Manager
+
+↓
+
 Application
-      │
-      ▼
-PowerChain Checkout UI SDK
-      │
-      ├── Commerce
-      ├── Payments
-      ├── Wallets
-      ├── Assets
-      ├── Treasury
-      ├── Settlement
-      ├── Compliance
-      ├── Analytics
-      │
-      ▼
-Checkout SDK
-      │
-      ▼
-PowerChain APIs
-      │
-      ▼
-PowerChain Network™
+
 ```
 
----
-
-# Design System
-
-Built on the **PowerChain Design System™**.
-
-## Foundations
-
-- Design Tokens
-- Typography
-- Colour System
-- Motion
-- Elevation
-- Icons
-- Responsive Grid
-- Accessibility
 
 ---
 
-# White Label
+# Authentication Flows
 
-Every enterprise deployment can customise:
 
-- Logo
-- Colour Palette
-- Typography
-- Icons
-- Layout
-- Checkout Flow
-- Payment Priority
-- Wallet Priority
-- Regional Settings
-- Compliance Notices
+## Sign Up
 
----
+```
+Registration
 
-# Accessibility
+↓
 
-Built to enterprise accessibility standards.
+Verification
 
-- WCAG 2.2 AA
-- WAI-ARIA
-- Keyboard Navigation
-- Screen Reader Support
-- Reduced Motion
-- High Contrast
-- RTL Languages
+↓
 
----
+Identity Creation
 
-# Security
+↓
 
-Designed for regulated financial environments.
+Organisation Assignment
 
-- PCI-Aware Components
-- Secure Transaction Signing
-- CSP Compatible
-- Secure iFrames
-- Session Protection
-- Role-Based Access Control
-- Audit Logging
-- Zero-Trust UI Patterns
+↓
 
----
+Session Creation
 
-# Framework Support
+```
 
-## Supported
 
-- React
-- Next.js
-- TypeScript
-- Web Components
+## Login
 
-## Planned
+```
+Credentials
 
-- React Native
-- Flutter
-- Vue
-- Angular
-- Svelte
+↓
 
----
+Authentication
 
-# Developer Experience
+↓
 
-Included with the SDK:
+MFA
 
-- TypeScript Definitions
-- Storybook
-- Component Playground
-- Theme Playground
-- Checkout Simulator
-- Wallet Simulator
-- Mock APIs
-- Testing Utilities
-- Enterprise Examples
+↓
+
+Token Issuance
+
+↓
+
+Session
+
+```
+
+
+## Password Reset
+
+```
+Reset Request
+
+↓
+
+Verification
+
+↓
+
+Password Update
+
+↓
+
+Session Refresh
+
+```
+
 
 ---
 
-# Package Metadata
+# API Governance Platform
+
+
+## Rate Limiting & Quotas
+
+
+Package:
+
+```
+@powerchain/rate-limit
+```
+
+
+Purpose:
+
+Protect APIs and manage enterprise usage.
+
+
+Architecture:
+
+```
+Request
+
+↓
+
+API Key
+
+↓
+
+Identity
+
+↓
+
+Tier Resolver
+
+↓
+
+Quota Engine
+
+↓
+
+Allow / Reject
+
+```
+
+
+---
+
+# API Tiers
+
+
+```yaml
+tiers:
+
+ developer:
+   requests:100/minute
+
+ business:
+   requests:5000/minute
+
+ enterprise:
+   requests:50000/minute
+
+ institutional:
+   requests:250000/minute
+
+```
+
+
+---
+
+# Rate Limit Error
+
+
+HTTP:
+
+```
+429 Too Many Requests
+```
+
+
+Response:
 
 ```json
 {
-  "name": "@powerchain/checkout-ui",
-  "version": "1.0.0-beta",
-  "license": "Apache-2.0",
-  "type": "module",
-  "sideEffects": false
+ "error":{
+   "code":"RATE_LIMIT_EXCEEDED",
+   "message":"API request limit exceeded",
+   "retry_after":60,
+   "request_id":"req_xxxxx"
+ }
 }
 ```
+
+
+Headers:
+
+```
+X-RateLimit-Limit
+
+X-RateLimit-Remaining
+
+X-RateLimit-Reset
+
+Retry-After
+
+```
+
+
+---
+
+# Payment Fabric™
+
+Package:
+
+```
+@powerchain/payments
+```
+
+
+Capabilities:
+
+- Payment routing
+- Provider integrations
+- Currency conversion
+- Risk evaluation
+- Fraud detection
+- Settlement automation
+
+
+---
+
+# Wallet OS™
+
+Package:
+
+```
+@powerchain/wallets
+```
+
+
+Supported:
+
+- Solana
+- EVM networks
+- WalletConnect
+- Embedded wallets
+- Institutional custody
+
+
+---
+
+# Asset Cloud™
+
+Package:
+
+```
+@powerchain/assets
+```
+
+
+Supports:
+
+- Digital currencies
+- Stablecoins
+- Carbon credits
+- Renewable certificates
+- Tokenised assets
+- Energy credits
+
+
+---
+
+# Workflow Engine™
+
+Package:
+
+```
+@powerchain/workflows
+```
+
+
+Workflow:
+
+```
+Trigger
+
+↓
+
+Rules
+
+↓
+
+Actions
+
+↓
+
+Approval
+
+↓
+
+Settlement
+
+↓
+
+Audit
+
+```
+
+
+---
+
+# PowerChain Intelligence™
+
+Package:
+
+```
+@powerchain/agents
+```
+
+
+Agents:
+
+- Checkout Agent
+- Payment Agent
+- Treasury Agent
+- Risk Agent
+- Compliance Agent
+- Energy Agent
+- Investor Agent
+
+
+---
+
+# Runtime Core™
+
+Package:
+
+```
+@powerchain/runtime
+```
+
+
+Responsibilities:
+
+- Application lifecycle
+- Configuration loading
+- Tenant management
+- Feature flags
+- Service communication
+
+
+Example:
+
+```typescript
+new PowerChainRuntime({
+
+environment:"beta",
+
+region:"eu-west",
+
+tenant:"enterprise"
+
+});
+```
+
+
+---
+
+# Configuration System
+
+
+```
+config/
+
+├── environments
+
+│
+├── local
+
+├── development
+
+├── beta
+
+├── staging
+
+└── production
+
+
+├── tenants
+
+├── features
+
+├── integrations
+
+├── security
+
+└── secrets
+
+```
+
+
+Environment:
+
+```env
+POWERCHAIN_ENV=beta
+
+POWERCHAIN_VERSION=1.0.0-beta.0
+
+POWERCHAIN_NETWORK=testnet
+
+POWERCHAIN_ENABLE_AI=true
+
+POWERCHAIN_ENABLE_WALLETS=true
+
+POWERCHAIN_ENABLE_ASSETS=true
+
+```
+
+
+---
+
+# Documentation Platform™
+
+
+Package:
+
+```
+@powerchain/docs
+```
+
+
+Pipeline:
+
+```
+TypeScript
+
+↓
+
+TypeDoc
+
+↓
+
+API Metadata
+
+↓
+
+MDX
+
+↓
+
+Storybook
+
+↓
+
+Developer Portal
+
+```
+
+
+Generated:
+
+- API references
+- Component documentation
+- Type definitions
+- Examples
+- Architecture guides
+
+
+---
+
+# Storybook Enterprise Library
+
+
+```
+storybook/
+
+
+├── components
+
+├── patterns
+
+├── financial-ui
+
+├── workflows
+
+└── applications
+
+```
+
+
+---
+
+# Developer Platform
+
+
+Included:
+
+✅ TypeScript SDK  
+✅ React SDK  
+✅ CLI  
+✅ Generators  
+✅ Storybook  
+✅ TypeDoc  
+✅ MDX Docs  
+✅ Migration tools  
+✅ Partner SDK  
+✅ Deployment templates  
+
+
+---
+
+# CLI
+
+
+```bash
+powerchain init
+
+powerchain create-app
+
+powerchain generate-component
+
+powerchain generate-workflow
+
+powerchain add-payment
+
+powerchain add-wallet
+
+powerchain migrate
+
+powerchain validate
+
+powerchain deploy
+
+```
+
+
+---
+
+# Infrastructure
+
+
+## Docker
+
+```bash
+docker build -t powerchain-platform-sdk .
+```
+
+
+## Kubernetes
+
+
+```
+infrastructure/kubernetes/
+
+├── namespace
+
+├── deployment
+
+├── service
+
+├── ingress
+
+├── secrets
+
+└── monitoring
+
+```
+
+
+## Terraform
+
+
+```
+terraform/
+
+├── cloud
+
+├── networking
+
+├── databases
+
+├── security
+
+└── observability
+
+```
+
+
+---
+
+# Package Registry
+
+
+Version:
+
+```
+1.0.0-beta.0
+```
+
+
+Packages:
+
+```
+@powerchain/sdk
+
+@powerchain/runtime
+
+@powerchain/ui
+
+@powerchain/tokens
+
+@powerchain/checkout
+
+@powerchain/payments
+
+@powerchain/wallets
+
+@powerchain/assets
+
+@powerchain/workflows
+
+@powerchain/auth
+
+@powerchain/rate-limit
+
+@powerchain/docs
+
+@powerchain/agents
+
+@powerchain/cli
+
+@powerchain/partner-sdk
+
+```
+
+
+---
+
+# Release Artifact
+
+
+```
+powerchain-platform-sdk-v1.0.0-beta.0.zip
+```
+
+
+Contains:
+
+✓ Enterprise Monorepo  
+✓ Turborepo  
+✓ TypeScript Packages  
+✓ PowerChain UI™  
+✓ Authentication Platform  
+✓ Rate Limit Engine  
+✓ Checkout Engine  
+✓ Payment Fabric™  
+✓ Wallet OS™  
+✓ Asset Cloud™  
+✓ Workflow Engine  
+✓ AI Runtime  
+✓ Storybook  
+✓ TypeDoc  
+✓ MDX Documentation  
+✓ Developer Portal  
+✓ Docker  
+✓ Kubernetes  
+✓ Helm  
+✓ Terraform  
+✓ CI/CD  
+
 
 ---
 
 # Roadmap
 
-## Version 1.0
 
-- Enterprise Design System
-- Checkout Components
-- Payment Components
-- Wallet Components
-- Asset Components
-- Treasury Components
-- Settlement Components
-- Merchant Dashboard
-- White-Label Themes
-- Localisation
-- Accessibility
+## v1.0.0-beta.1
 
-## Version 1.1
+Developer Preview
 
-- Merchant Portal
-- Investor Portal
-- Token Sale Components
-- Carbon Market Components
-- Renewable Energy Marketplace
-- Advanced Data Grid
+Planned:
 
-## Version 2.0
+- Complete API portal
+- Partner onboarding
+- Migration tooling
+- SDK generators
+- Enterprise examples
 
-- AI Commerce Assistant
-- Visual Experience Builder
-- Workflow Designer
-- Autonomous Checkout
-- Enterprise UI Builder
+
+## v1.0.0-beta.2
+
+Enterprise Integration Release
+
+Planned:
+
+- Production deployment packs
+- Security handbook
+- SLA documentation
+- Certification framework
+
 
 ---
 
-# Documentation
+# Final Identity
 
-- Getting Started
-- Installation
-- Component Library
-- Design System
-- Theming
-- Checkout Flows
-- Wallet Integration
-- Payment Methods
-- Tokenisation
-- Treasury
-- Capital Markets
-- API Reference
-- Migration Guides
 
----
+## PowerChain Checkout™ UI SDK
 
-# License
+**Version:** 1.0.0-beta.0  
+**Platform:** PowerChain Platform™  
+**Framework:** PowerChain UI™  
+**Release:** Enterprise Foundation Edition  
 
-Apache-2.0
 
-Copyright © 2026 PowerChain™
+Enterprise Financial Experience Infrastructure
 
----
-
-<p align="center">
-
-**PowerChain Checkout™ UI SDK**
-
-Enterprise Commerce Design Platform™
-
-Build secure, accessible and enterprise-grade commerce experiences with a unified design system for payments, digital assets, treasury and programmable finance.
-
-Powered by **PowerChain Checkout™** and **PowerChain Network™**
-
-</p>
+© 2026 PowerChain™
