@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logo/powerchain-logo.png" width="220" alt="PowerChain">
+  <img src="(https://github.com/powerchain-protocol/checkout/blob/43ddd9841601ddea146e64ab96f3e2418a742247/assets/architecture/checkout-architecture.png)" width="1000" alt="PowerChain">
 </p>
 
 <p align="center">
